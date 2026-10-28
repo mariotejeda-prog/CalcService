@@ -1,0 +1,7 @@
+[11:38:27] prd_dir='./artifacts/outputs/product-definition/prd' blocker_count='0'
+[11:38:27] RV1: 0 upstream blockers → PASS
+[11:38:27] PRD file: C:\IA Trainings\CalcService\artifacts\outputs\product-definition\prd\PRD-SPEC-pd-20261027-calc001.md
+[11:38:27] lines read: 589
+[11:38:27] RV2: no placeholder text in project_info → PASS
+[11:38:27] RV5: mvp_phasing IDs have accompanying names → PASS
+[11:38:27] verdict: PASSED (blockers_failed=0, warnings_failed=0)

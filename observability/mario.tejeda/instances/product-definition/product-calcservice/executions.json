@@ -1,0 +1,313 @@
+[
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T11:24:56.594Z",
+    "completed_at": "2026-10-28T11:35:02.992Z",
+    "duration_seconds": 606,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "coda",
+    "run_id": "1793186696594-cj5jhrg2",
+    "model": "globant_dgx/GLM-5.3-Flash",
+    "model_tier": "orchestrator",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": true,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 9419396,
+      "output_tokens": 43740,
+      "cache_creation_tokens": 0,
+      "cache_read_tokens": 0
+    },
+    "items_spawned": 3,
+    "artifact_group_id": "c05d13b3-07e5-4fda-a158-fb09d751e258",
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "synthesize",
+    "billing_state": "pending"
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T11:36:20.730Z",
+    "completed_at": "2026-10-28T11:36:23.766Z",
+    "duration_seconds": 3,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "app",
+    "run_id": "1793187380730-46moh8xa",
+    "model": "app:prd-validation",
+    "requested_model": "globant_dgx/GLM-5.3-Flash",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "token_usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_creation_tokens": 0,
+      "cache_read_tokens": 0
+    },
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "review",
+    "billing_state": "pending"
+  },
+  {
+    "execution_id": "f651e20f-4bee-41cd-bb22-240c8617b35c",
+    "step_id": "prd-creation",
+    "version_sequence": 2,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T11:36:24.930Z",
+    "completed_at": "2026-10-28T11:38:23.764Z",
+    "duration_seconds": 119,
+    "status": "Success",
+    "request_type": "Iteration",
+    "executor": "coda",
+    "run_id": "1793187384930-am2gpyuf",
+    "model": "globant_dgx/GLM-5.3-Flash",
+    "model_tier": "orchestrator",
+    "session_resume": {
+      "resumed": true,
+      "provider_session_id": "e597a956-67da-40ea-8940-0079830e8c47"
+    },
+    "parallel_delegation": {
+      "available": true,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 658036,
+      "output_tokens": 7791,
+      "cache_creation_tokens": 0,
+      "cache_read_tokens": 0
+    },
+    "items_spawned": 3,
+    "artifact_group_id": "c05d13b3-07e5-4fda-a158-fb09d751e258",
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "synthesize",
+    "billing_state": "pending"
+  },
+  {
+    "execution_id": "d0427eb9-a39d-4a5e-a77b-d48dbe018dc9",
+    "step_id": "prd-verification",
+    "version_sequence": 2,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T11:38:25.892Z",
+    "completed_at": "2026-10-28T11:38:27.754Z",
+    "duration_seconds": 2,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "app",
+    "run_id": "1793187505892-7mvbosas",
+    "model": "app:prd-validation",
+    "requested_model": "globant_dgx/GLM-5.3-Flash",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "token_usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_creation_tokens": 0,
+      "cache_read_tokens": 0
+    },
+    "items_spawned": 1,
+    "artifact_group_id": "5641b055-dd8c-4dbb-95a7-c3fd3656f296",
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "review",
+    "billing_state": "pending"
+  },
+  {
+    "execution_id": "f7e4d86e-972a-4222-83b4-885070fdfde5",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 1,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T11:44:38.848Z",
+    "completed_at": "2026-10-28T11:45:03.201Z",
+    "duration_seconds": 24,
+    "status": "Error_Format",
+    "request_type": "Generation",
+    "executor": "coda",
+    "run_id": "1793187878848-5hnzj21c",
+    "model": "globant_dgx/GLM-5.3-Flash",
+    "model_tier": "worker",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": true,
+      "used": false,
+      "count": 0
+    },
+    "error_message": "Invalid arguments for tool 'grep': missing required 'pattern' (expected string)",
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "generate",
+    "billing_state": "pending"
+  },
+  {
+    "execution_id": "9cdff13c-d376-423a-a02b-c6faae0e4533",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 2,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T11:50:33.471Z",
+    "completed_at": "2026-10-28T11:59:10.921Z",
+    "duration_seconds": 517,
+    "status": "Success",
+    "request_type": "Fix",
+    "executor": "coda",
+    "run_id": "1793188233471-kgm30pt",
+    "model": "globant_dgx/GLM-5.3-Flash",
+    "model_tier": "worker",
+    "session_resume": {
+      "resumed": true,
+      "provider_session_id": "ae198d7f-2000-4e01-87e3-36b324842635"
+    },
+    "parallel_delegation": {
+      "available": true,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 6733612,
+      "output_tokens": 31076,
+      "cache_creation_tokens": 0,
+      "cache_read_tokens": 0
+    },
+    "items_spawned": 4,
+    "artifact_group_id": "45f03c01-ad53-4e64-9701-6db43d55b1ee",
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "generate",
+    "billing_state": "pending"
+  },
+  {
+    "execution_id": "882a2803-b74a-4844-9671-7bf36add701e",
+    "step_id": "epics-verification",
+    "version_sequence": 1,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T12:01:49.677Z",
+    "completed_at": "2026-10-28T12:01:51.064Z",
+    "duration_seconds": 1,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "app",
+    "run_id": "1793188909677-4xs52w7a",
+    "model": "app:epics-verification",
+    "requested_model": "globant_dgx/GLM-5.3-Flash",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "token_usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_creation_tokens": 0,
+      "cache_read_tokens": 0
+    },
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "review",
+    "billing_state": "pending"
+  },
+  {
+    "execution_id": "a1997679-04ee-4b74-acab-e63bbc3ea789",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 3,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T12:01:52.323Z",
+    "completed_at": "2026-10-28T12:05:24.941Z",
+    "duration_seconds": 213,
+    "status": "Success",
+    "request_type": "Iteration",
+    "executor": "coda",
+    "run_id": "1793188912323-60zddhzt",
+    "model": "globant_dgx/GLM-5.3-Flash",
+    "model_tier": "worker",
+    "session_resume": {
+      "resumed": true,
+      "provider_session_id": "ae198d7f-2000-4e01-87e3-36b324842635"
+    },
+    "parallel_delegation": {
+      "available": true,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 865891,
+      "output_tokens": 9231,
+      "cache_creation_tokens": 0,
+      "cache_read_tokens": 0
+    },
+    "items_spawned": 4,
+    "artifact_group_id": "45f03c01-ad53-4e64-9701-6db43d55b1ee",
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "generate",
+    "billing_state": "pending"
+  },
+  {
+    "execution_id": "1397ac09-d00e-4f91-89ca-ab2618f4264c",
+    "step_id": "epics-verification",
+    "version_sequence": 2,
+    "session_name": "product-calcservice",
+    "capability_name": "product-definition",
+    "started_at": "2026-10-28T12:05:27.039Z",
+    "completed_at": "2026-10-28T12:05:28.874Z",
+    "duration_seconds": 2,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "app",
+    "run_id": "1793189127039-bqn491v8",
+    "model": "app:epics-verification",
+    "requested_model": "globant_dgx/GLM-5.3-Flash",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "token_usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_creation_tokens": 0,
+      "cache_read_tokens": 0
+    },
+    "items_spawned": 1,
+    "artifact_group_id": "b711d7de-1e67-47a2-9137-147861f104a0",
+    "user_id_source": "git",
+    "user_id": "mario.tejeda@globant.com",
+    "user_id_raw": "mario.tejeda@globant.com",
+    "archetype": "review",
+    "billing_state": "pending"
+  }
+]

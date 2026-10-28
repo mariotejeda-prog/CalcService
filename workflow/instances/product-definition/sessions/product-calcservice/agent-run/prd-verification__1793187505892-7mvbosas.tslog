@@ -1,0 +1,2 @@
+[app-executor] product-definition/prd-verification app=prd-validation run=1793187505892-7mvbosas
+$ python3 "C:\Users\mario.tejeda\.ai_pods_stepwise\registry\apps\prd-validation/check_prd_validation.py" --prd-dir "./artifacts/outputs/product-definition/prd" --output "C:\IA Trainings\CalcService\artifacts\outputs\product-definition\prd\prd-verification"

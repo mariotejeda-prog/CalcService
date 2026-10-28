@@ -1,0 +1,7 @@
+[11:36:23] prd_dir='./artifacts/outputs/product-definition/prd' blocker_count='0'
+[11:36:23] RV1: 0 upstream blockers → PASS
+[11:36:23] PRD file: C:\IA Trainings\CalcService\artifacts\outputs\product-definition\prd\PRD-SPEC-pd-20261027-calc001.md
+[11:36:23] lines read: 589
+[11:36:23] RV2: placeholder text in ['`client_name`']
+[11:36:23] RV5: 3 bare IDs in mvp_phasing → WARNING
+[11:36:23] verdict: FAILED (blockers_failed=1, warnings_failed=1)

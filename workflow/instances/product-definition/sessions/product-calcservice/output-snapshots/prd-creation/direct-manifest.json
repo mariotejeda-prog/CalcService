@@ -1,0 +1,16 @@
+{
+  "project_root": "C:\\IA Trainings\\CalcService",
+  "scope": [
+    "artifacts\\outputs\\product-definition\\prd"
+  ],
+  "files": {
+    "artifacts\\outputs\\product-definition\\prd\\PRD-AUDIT-pd-20261027-calc001.md": "ee7a045de13f6cd22766b4de952fd8486c6872333683d06900716ec760b24958",
+    "artifacts\\outputs\\product-definition\\prd\\PRD-SPEC-pd-20261027-calc001.md": "8e256d4bd6f3f35a8293ff6b3049bddfa33112eccdb18a84226900ff8c6ae33e",
+    "artifacts\\outputs\\product-definition\\prd\\prd-verification\\prd-verification-operations.log": "784c0f8123390b5fc61d1c8b8f5bedc9d66ade93c9b6b3d4514fb6b982fbeb57",
+    "artifacts\\outputs\\product-definition\\prd\\prd-verification\\prd_failed_blocker_count.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "artifacts\\outputs\\product-definition\\prd\\prd-verification\\prd_verification_findings.json": "a08003d70e9a19a46859eb127d80ea3e1645fcb13d847992af1a3365e729dd98",
+    "artifacts\\outputs\\product-definition\\prd\\prd-verification\\prd_verification_findings.md": "4beb43d352cabe9a2a111bee2b570102ac50bcb416c320f906f81006e4d81805",
+    "artifacts\\outputs\\product-definition\\prd\\prd-verification\\prd_verification_verdict.txt": "02bd349299173f7fdf2dbc983d70961b26d74e6260c3755a058e25f5ee172f98",
+    "artifacts\\outputs\\product-definition\\prd\\_progress.json": "746113460e556a4901cb27e56f4e513b1d215281c3db38e98ad8a3fa32ed4cb9"
+  }
+}

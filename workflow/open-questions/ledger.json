@@ -1,0 +1,722 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-28T12:05:24.999Z",
+  "project_id": "path:default",
+  "questions": [
+    {
+      "key": "514eb033-0b90-5e13-9d4b-027599693c14",
+      "local_ids": [
+        "PI-01"
+      ],
+      "question": "What precision policy (number of decimal digits and rounding mode) must the high-precision internal computation apply so results are identical across systems?",
+      "subject": "functional_requirements",
+      "why_it_matters": "HIGH — FR-03 (Produce deterministic, high-precision results) and RSK-04 cannot be verified without a fixed precision policy; without it, the rounding differences between systems the service exists to eliminate can recur",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "a single high-precision decimal computation strategy is applied service-wide and treated as an implementation detail until stated",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "FR-03",
+            "RSK-04"
+          ],
+          "raised_at": "2026-10-28T11:38:23.818Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.182Z",
+      "updated_at": "2026-10-28T11:38:23.818Z"
+    },
+    {
+      "key": "025246e3-7c17-537f-b074-8e12647aa8f6",
+      "local_ids": [
+        "PI-02"
+      ],
+      "question": "What is the history retrieval contract — endpoint path, response shape, and how many recent records are returned?",
+      "subject": "functional_requirements",
+      "why_it_matters": "MEDIUM — FR-08 (Provide history retrieval of recent calculation records) cannot be implemented or tested without an endpoint contract",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "FR-08 is emitted with status pending and no endpoint contract; history retrieval is excluded from the MVP phase",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "FR-08"
+          ],
+          "raised_at": "2026-10-28T11:38:23.820Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.191Z",
+      "updated_at": "2026-10-28T11:38:23.820Z"
+    },
+    {
+      "key": "671eb240-c535-577c-9ce4-0a2c0f08c9c6",
+      "local_ids": [
+        "PI-03"
+      ],
+      "question": "What numeric latency threshold should \"millisecond-level response time\" commit to for standard operations?",
+      "subject": "non_functional_requirements",
+      "why_it_matters": "HIGH — NFR-01 (performance) has no verifiable target until a number is committed; load and capacity planning for the calculate operation depend on it",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "millisecond-level interpreted as sub-second response (< 1000 ms) for standard operations",
+      "answer_shape": "enum",
+      "options": [
+        {
+          "id": "standard",
+          "label": "Standard (< 1000 ms, lower infra cost)"
+        },
+        {
+          "id": "fast",
+          "label": "Fast (< 100 ms, typical microservice budget)"
+        },
+        {
+          "id": "ultra",
+          "label": "Ultra-low (< 10 ms, requires aggressive scaling budget)"
+        }
+      ],
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "NFR-01"
+          ],
+          "raised_at": "2026-10-28T11:38:23.820Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.192Z",
+      "updated_at": "2026-10-28T11:38:23.820Z"
+    },
+    {
+      "key": "83dd5d36-c119-5e06-bad7-8ce0ac304c87",
+      "local_ids": [
+        "PI-04"
+      ],
+      "question": "What concurrency or request-volume target must horizontal scaling support?",
+      "subject": "non_functional_requirements",
+      "why_it_matters": "MEDIUM — NFR-04 (Stateless design supports horizontal scaling) has no numeric capacity target, so scaling tests cannot assert pass/fail",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "horizontal scaling by adding instances with no numeric concurrency target committed",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "NFR-04"
+          ],
+          "raised_at": "2026-10-28T11:38:23.820Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.192Z",
+      "updated_at": "2026-10-28T11:38:23.820Z"
+    },
+    {
+      "key": "a2fd2e76-20ed-5abb-9b24-67febabf7a74",
+      "local_ids": [
+        "PI-05"
+      ],
+      "question": "What observability capability must be ready at launch — structured logs only, or also metrics and tracing hooks?",
+      "subject": "non_functional_requirements",
+      "why_it_matters": "MEDIUM — NFR-05 (Observability readiness) has no measurable target; the scope of launch-day diagnostics tooling depends on the answer",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "structured logging sufficient for diagnostics; metrics and tracing integration deferred",
+      "answer_shape": "enum",
+      "options": [
+        {
+          "id": "logs",
+          "label": "Structured logs only (lowest cost)"
+        },
+        {
+          "id": "logs_metrics",
+          "label": "Logs + metrics hooks (moderate)"
+        },
+        {
+          "id": "full",
+          "label": "Logs + metrics + tracing hooks (full readiness)"
+        }
+      ],
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "NFR-05"
+          ],
+          "raised_at": "2026-10-28T11:38:23.820Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.193Z",
+      "updated_at": "2026-10-28T11:38:23.820Z"
+    },
+    {
+      "key": "8a3647b2-2ee0-54b0-b6c5-305bce57bbf8",
+      "local_ids": [
+        "PI-06"
+      ],
+      "question": "What security and access-control requirements apply to the calculation API (authentication, network exposure, input limits)?",
+      "subject": "non_functional_requirements",
+      "why_it_matters": "HIGH — NFR-06 (Security) has no source evidence at all; the API exposure model decides whether the service is callable platform-wide or restricted",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "service treated as an internal platform component with no additional authentication assumed",
+      "answer_shape": "enum",
+      "options": [
+        {
+          "id": "internal_open",
+          "label": "Internal network, no auth (simplest, fastest adoption)"
+        },
+        {
+          "id": "internal_auth",
+          "label": "Internal network + service authentication (standard)"
+        },
+        {
+          "id": "public",
+          "label": "Externally reachable with full auth (highest cost)"
+        }
+      ],
+      "audience": "architect",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "NFR-06"
+          ],
+          "raised_at": "2026-10-28T11:38:23.821Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.193Z",
+      "updated_at": "2026-10-28T11:38:23.821Z"
+    },
+    {
+      "key": "4d202bf8-849d-527f-80a8-fc2ad1950d5d",
+      "local_ids": [
+        "PI-07"
+      ],
+      "question": "What usability standard should the API contract commit to, given adoption depends on simplicity?",
+      "subject": "non_functional_requirements",
+      "why_it_matters": "LOW — NFR-07 has no measurable usability standard; RSK-02 (teams bypassing the service) is mitigated by simplicity, so the standard affects adoption risk",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "simple payload design (operands + operation in, result out) treated as the usability baseline",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "NFR-07",
+            "RSK-02"
+          ],
+          "raised_at": "2026-10-28T11:38:23.821Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.193Z",
+      "updated_at": "2026-10-28T11:38:23.821Z"
+    },
+    {
+      "key": "c5ed68d9-c6c7-54b2-a388-f3326a67011c",
+      "local_ids": [
+        "PI-08"
+      ],
+      "question": "What numeric targets should replace the qualitative success criteria (teams stop duplicating math logic, results become consistent, calculations traceable)?",
+      "subject": "kpis",
+      "why_it_matters": "MEDIUM — KPI-05, KPI-06, KPI-07 are unverifiable as qualitative statements; success of the whole engagement is judged against them",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "qualitative success criteria tracked as binary (met / not met) until numeric targets are set",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "KPI-05",
+            "KPI-06",
+            "KPI-07"
+          ],
+          "raised_at": "2026-10-28T11:38:23.821Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.194Z",
+      "updated_at": "2026-10-28T11:38:23.821Z"
+    },
+    {
+      "key": "87c0d49a-5361-5c41-a03e-28da5f5a5f28",
+      "local_ids": [
+        "PI-09"
+      ],
+      "question": "Which upstream system is the first integration target for the calculate operation?",
+      "subject": "dependencies",
+      "why_it_matters": "MEDIUM — DEP-01 (Upstream consumer systems) and KPI-01 (at least one integration) need a named first consumer to sequence delivery",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "any one upstream system qualifies for the success criterion; integration sequencing left to delivery planning",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "DEP-01",
+            "KPI-01"
+          ],
+          "raised_at": "2026-10-28T11:38:23.821Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.195Z",
+      "updated_at": "2026-10-28T11:38:23.821Z"
+    },
+    {
+      "key": "43d9b8b1-cde2-53dc-a667-bf6003add4b7",
+      "local_ids": [
+        "PI-10"
+      ],
+      "question": "What are the budget, timeline, and staffing constraints for delivering the service?",
+      "subject": "constraints",
+      "why_it_matters": "MEDIUM — the constraints section carries pending placeholders for budget, timeline, and resource; delivery planning cannot size phases against them",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "no budget ceiling, no calendar deadline, and no staffing cap assumed; scope treated as uncapped until stated",
+      "answer_shape": "free_text",
+      "audience": "client",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "constraints.budget",
+            "constraints.timeline",
+            "constraints.resource"
+          ],
+          "raised_at": "2026-10-28T11:38:23.821Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.196Z",
+      "updated_at": "2026-10-28T11:38:23.821Z"
+    },
+    {
+      "key": "7046793c-a3dc-5d2c-98d4-97ef1891182c",
+      "local_ids": [
+        "PI-11"
+      ],
+      "question": "Are there regulatory or compliance obligations that apply to the service or its calculation records?",
+      "subject": "constraints",
+      "why_it_matters": "LOW — the regulatory constraints sub-category is a pending placeholder; if obligations exist, history retention and audit requirements in FR-06/FR-08 would change",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "no regulatory constraints assumed; history treated as diagnostic-only per the discovery transcript",
+      "answer_shape": "boolean",
+      "audience": "client",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "constraints.regulatory",
+            "FR-06"
+          ],
+          "raised_at": "2026-10-28T11:38:23.822Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "question",
+      "created_at": "2026-10-28T11:35:03.196Z",
+      "updated_at": "2026-10-28T11:38:23.822Z"
+    },
+    {
+      "key": "74ae3574-42ac-5851-b922-9ef3ba462012",
+      "local_ids": [
+        "ASM-01"
+      ],
+      "question": "Consumer personas are technically proficient engineering roles",
+      "subject": "personas",
+      "why_it_matters": "Persona goals and pain points may not reflect actual consumer behavior, skewing API usability prioritization",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "Consumer personas are technically proficient engineering roles",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "P-01",
+            "P-02",
+            "P-03",
+            "P-04"
+          ],
+          "raised_at": "2026-10-28T11:38:23.822Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "assumption",
+      "created_at": "2026-10-28T11:35:03.200Z",
+      "updated_at": "2026-10-28T11:38:23.822Z"
+    },
+    {
+      "key": "8501c5fa-4eda-5909-8fb8-1497384069c0",
+      "local_ids": [
+        "ASM-02"
+      ],
+      "question": "The brief's conceptual API contract field names are the intended contract names",
+      "subject": "functional_requirements",
+      "why_it_matters": "Acceptance criteria and API documentation would use field names differing from the final implemented contract",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "The brief's conceptual API contract field names are the intended contract names",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "FR-04",
+            "LIT-02",
+            "LIT-03",
+            "LIT-04",
+            "LIT-05",
+            "LIT-06",
+            "LIT-07"
+          ],
+          "raised_at": "2026-10-28T11:38:23.822Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "assumption",
+      "created_at": "2026-10-28T11:35:03.201Z",
+      "updated_at": "2026-10-28T11:38:23.822Z"
+    },
+    {
+      "key": "4606eb39-0590-596a-9be8-41dbc9e56b6c",
+      "local_ids": [
+        "ASM-03"
+      ],
+      "question": "History persistence uses a lightweight local embedded database abstraction",
+      "subject": "dependencies",
+      "why_it_matters": "Persistence design, deployment footprint, and replaceability guarantees in FR-06 would need rework",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "History persistence uses a lightweight local embedded database abstraction",
+      "answer_shape": "free_text",
+      "audience": "architect",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "FR-06",
+            "DEP-02",
+            "LIT-11"
+          ],
+          "raised_at": "2026-10-28T11:38:23.823Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "assumption",
+      "created_at": "2026-10-28T11:35:03.201Z",
+      "updated_at": "2026-10-28T11:38:23.823Z"
+    },
+    {
+      "key": "62a2df8e-609f-5f36-859b-fe3080c5fcb0",
+      "local_ids": [
+        "ASM-04"
+      ],
+      "question": "Stateless design is the mechanism that enables horizontal scaling",
+      "subject": "non_functional_requirements",
+      "why_it_matters": "Scaling behavior would depend on stateful components, invalidating FR-10 acceptance criteria",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "Stateless design is the mechanism that enables horizontal scaling",
+      "answer_shape": "free_text",
+      "audience": "architect",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "FR-10",
+            "NFR-04"
+          ],
+          "raised_at": "2026-10-28T11:38:23.823Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "assumption",
+      "created_at": "2026-10-28T11:35:03.202Z",
+      "updated_at": "2026-10-28T11:38:23.823Z"
+    },
+    {
+      "key": "abad2154-8534-5be7-a915-c0502739e56c",
+      "local_ids": [
+        "ASM-05"
+      ],
+      "question": "The reliability guarantee is stated at both FR and NFR level intentionally",
+      "subject": "non_functional_requirements",
+      "why_it_matters": "Duplicate coverage could cause inconsistent verification; if unintended, NFR-03 should be merged into FR-07",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "The reliability guarantee is stated at both FR and NFR level intentionally",
+      "answer_shape": "free_text",
+      "audience": "internal",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "FR-07",
+            "NFR-03"
+          ],
+          "raised_at": "2026-10-28T11:38:23.825Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "assumption",
+      "created_at": "2026-10-28T11:35:03.203Z",
+      "updated_at": "2026-10-28T11:38:23.825Z"
+    },
+    {
+      "key": "e44e5e82-e452-5ea2-8778-7af8764e6d28",
+      "local_ids": [
+        "ASM-06"
+      ],
+      "question": "Synchronous request/response is the only interaction mode required at launch",
+      "subject": "scope",
+      "why_it_matters": "Asynchronous or batch interaction modes would require additional API surface not covered by FR-04",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "Synchronous request/response is the only interaction mode required at launch",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "FR-04"
+          ],
+          "raised_at": "2026-10-28T11:38:23.825Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "assumption",
+      "created_at": "2026-10-28T11:35:03.205Z",
+      "updated_at": "2026-10-28T11:38:23.825Z"
+    },
+    {
+      "key": "b450c1ca-bf6c-53c4-b304-09894e9efae7",
+      "local_ids": [
+        "ASM-07"
+      ],
+      "question": "MoSCoW priorities inferred from source phrasing (standard operations first, history optional, future capabilities planned)",
+      "subject": "mvp_phasing",
+      "why_it_matters": "Phasing would change; capabilities assumed must-have could be deferred or vice versa",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "MoSCoW priorities inferred from source phrasing (standard operations first, history optional, future capabilities planned)",
+      "answer_shape": "free_text",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "prd-creation",
+          "run_id": "1793187384930-am2gpyuf",
+          "artifact_ref": "./artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md#open-questions",
+          "traces_to": [
+            "FR-01",
+            "FR-02",
+            "FR-06",
+            "FR-08"
+          ],
+          "raised_at": "2026-10-28T11:38:23.825Z",
+          "source": "sidecar",
+          "work_item": "session:product-definition/product-calcservice"
+        }
+      ],
+      "kind": "assumption",
+      "created_at": "2026-10-28T11:35:03.206Z",
+      "updated_at": "2026-10-28T11:38:23.825Z"
+    },
+    {
+      "key": "3a1ae039-4481-5961-833b-bb339065a208",
+      "local_ids": [
+        "ASM-E01"
+      ],
+      "question": "T-04 (platform service foundation) groups the stateless service shell (EPIC-07) and the API contract documentation (EPIC-08) as one foundation theme",
+      "subject": "theme grouping",
+      "why_it_matters": "Epics may be misgrouped; EPIC-08 is a documentation enabler while EPIC-07 is an infrastructure enabler, so a reviewer may prefer separate themes — grouping affects how downstream story decomposition and backlog review read the foundation layer",
+      "blocking": false,
+      "blocking_override": null,
+      "assumption_if_unanswered": "T-04 (platform service foundation) groups the stateless service shell (EPIC-07) and the API contract documentation (EPIC-08) as one foundation theme",
+      "answer_shape": "boolean",
+      "audience": "product_owner",
+      "audience_declared": true,
+      "status": "open",
+      "occurrences": [
+        {
+          "capability": "product-definition",
+          "session": "product-calcservice",
+          "step_id": "backlog-epic-generation",
+          "run_id": "1793188912323-60zddhzt",
+          "work_item": "session:product-definition/product-calcservice",
+          "artifact_ref": "./artifacts/outputs/product-definition/epics/EPICS-SPEC-pd-20261028-calc001.md#open-questions",
+          "traces_to": [
+            "T-04",
+            "EPIC-07",
+            "EPIC-08"
+          ],
+          "raised_at": "2026-10-28T12:05:24.998Z",
+          "source": "sidecar"
+        }
+      ],
+      "kind": "assumption",
+      "created_at": "2026-10-28T11:59:11.099Z",
+      "updated_at": "2026-10-28T12:05:24.998Z"
+    }
+  ],
+  "aliases": {}
+}

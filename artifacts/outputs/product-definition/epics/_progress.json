@@ -1,0 +1,20 @@
+{
+  "skill": "planning-epics",
+  "session_id": "pd-20261028-calc001",
+  "status": "COMPLETED",
+  "started_at": "2026-10-28T11:52:00Z",
+  "completed_at": "2026-10-28T11:58:38Z",
+  "skeleton_written": true,
+  "sections": {
+    "project_info": "complete",
+    "prd_id_ownership": "complete",
+    "epics": "complete",
+    "themes": "complete",
+    "dependencies": "complete",
+    "sequencing": "complete",
+    "reclassification_log": "complete",
+    "persona_coverage": "complete",
+    "goal_coverage": "complete",
+    "open_questions": "complete"
+  }
+}

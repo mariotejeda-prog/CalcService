@@ -1,0 +1,15 @@
+capability: product-definition
+version: 1.6.0
+parameters:
+  project_brief: ./artifacts/inputs/project-brief.md
+  project_name: CalcService
+  input_folder: ./artifacts/inputs
+  output_folder: ./artifacts/outputs/product-definition
+  meeting_recording: meetings
+  transcript_output: transcripts
+  prd_template: prd_template.md
+  design_plan_report_path: ./artifacts/outputs/plan-design/design-plan-report.md
+  epics_output_folder: epics
+  prd_output_folder: prd
+configuration:
+  capability_configured: true

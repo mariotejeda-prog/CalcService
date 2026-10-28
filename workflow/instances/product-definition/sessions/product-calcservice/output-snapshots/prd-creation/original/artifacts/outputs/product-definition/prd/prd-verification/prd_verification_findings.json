@@ -1,0 +1,29 @@
+{
+  "verdict": "FAILED",
+  "blocker_count": 1,
+  "warn_count": 1,
+  "findings": [
+    {
+      "id": "RV1",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "No upstream blocker failures reported.",
+      "detail": ""
+    },
+    {
+      "id": "RV2",
+      "weight": "BLOCKER",
+      "status": "FAIL",
+      "description": "project_info contains placeholder text in 1 field(s).",
+      "detail": "`client_name` = `not stated in inputs`. Fill these from the project brief — placeholders indicate the PRD was not tailored to the actual project."
+    },
+    {
+      "id": "RV5",
+      "weight": "WARNING",
+      "status": "FAIL",
+      "description": "mvp_phasing contains 3 bare ID(s) without requirement names.",
+      "detail": "Bare IDs: ASM-07, ASM-07, ASM-07. The roadmap must be readable on its own — name each requirement alongside its ID so a reader does not need to cross-reference other sections."
+    }
+  ],
+  "checked_at": "2026-10-28T11:36:23Z"
+}

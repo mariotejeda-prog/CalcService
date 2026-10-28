@@ -1,0 +1,1019 @@
+{
+  "capability": {
+    "name": "product-definition",
+    "version": "1.6.0",
+    "instance_id": "pro-20261028-fra60a",
+    "sdlc_phase": "discovery"
+  },
+  "session_name": "product-calcservice",
+  "user_id": "mario.tejeda@globant.com",
+  "status": "in_progress",
+  "current_step": "epic-validation",
+  "current_step_index": 5,
+  "started_at": "2026-10-28T11:24:38.912Z",
+  "steps": {
+    "prd-creation": {
+      "status": "completed",
+      "notes": "",
+      "started_at": "2026-10-28T11:36:23.821Z",
+      "exec_log_latest_path": "C:\\IA Trainings\\CalcService\\workflow\\instances\\product-definition\\sessions\\product-calcservice\\agent-run\\prd-creation__1793187384930-am2gpyuf.log",
+      "exec_log_latest_run_id": "1793187384930-am2gpyuf",
+      "exec_log_latest_model": "globant_dgx/GLM-5.3-Flash",
+      "exec_log_latest_started_at": "2026-10-28T11:36:24.930Z",
+      "exec_log_latest_executor": "coda",
+      "provider_session_latest": {
+        "executor": "coda",
+        "model": "globant_dgx/GLM-5.3-Flash",
+        "requested_model": "globant_dgx/GLM-5.3-Flash",
+        "assigned": true,
+        "usage_total": {
+          "inputTokens": 10077432,
+          "outputTokens": 51531,
+          "cacheReadTokens": 0,
+          "cacheCreationTokens": 0
+        },
+        "session_id": "e597a956-67da-40ea-8940-0079830e8c47",
+        "run_id": "1793187384930-am2gpyuf",
+        "captured_at": "2026-10-28T11:38:23.764Z"
+      },
+      "outputs": {
+        "read_manifest_path": "./workflow/instances/product-definition/sessions/product-calcservice/read-manifest-prd-creation.json",
+        "prd_output_path": "./artifacts/outputs/product-definition/prd"
+      },
+      "archetype": "synthesize",
+      "artifact_group_id": "c05d13b3-07e5-4fda-a158-fb09d751e258",
+      "exec_failure_message": "Gate 'prd-verification' rejected (verdict 'FAILED').",
+      "retry_feedback_source": {
+        "gate_step_id": "prd-verification",
+        "raw_feedback": "The automated verification gate 'prd-verification' REJECTED this artifact (verdict 'FAILED'). Address the findings below before re-submitting.\nGate outputs (read the referenced report/findings files):\n- prd_verification_verdict: FAILED\n- prd_verification_report_path: C:\\IA Trainings\\CalcService\\artifacts\\outputs\\product-definition\\prd\\prd-verification\\prd_verification_findings.json\n- prd_failed_blocker_count: 1"
+      },
+      "exec_log_latest_session_resume": {
+        "resumed": true,
+        "provider_session_id": "e597a956-67da-40ea-8940-0079830e8c47"
+      },
+      "open_questions_delivered_at": "2026-10-28T11:36:25.035Z",
+      "completed_at": "2026-10-28T11:38:23.920Z",
+      "completed_by_user": true,
+      "changed_files": [
+        {
+          "path": "artifacts/outputs/product-definition/prd/PRD-AUDIT-pd-20261027-calc001.md",
+          "change": "modified",
+          "before_hash": "ee7a045de13f6cd22766b4de952fd8486c6872333683d06900716ec760b24958",
+          "after_hash": "78af3d8820898dffe69442b4e678e5eb6b59e3324f83fc5b380595437060229e",
+          "preview": "  # PRD-AUDIT-pd-20261027-calc001\n  \n  ## Session Metadata\n- - version: 1.0.0\n- - mode: SYNTHESIZE\n+ - version: 1.0.1\n+ - mode: REPAIR\n  - session_id: pd-20261027-calc001\n  - timestamp: 2026-10-28T11:27:09Z (run start, UTC)\n  - language: en\n  - engagement_mode: greenfield\n  - skill: researching-prd (v3.8.0)\n  \n  ## Sources Referenced\n  1. `artifacts/inputs/project-brief.md` — Project Brief: Math Operations Microservice (Calc-Service), v1.1 (144 lines). Read in full; primary source for capabilities, API contract, non-functional goals, success criteria.\n  2. `artifacts/transcripts/discovery-transcript.md` — Discovery Conversation Transcript, 15 min with the product owner (189 lines). Read in full; primary source for pain points, priorities, risks, success criteria.\n  3. `artifacts/inputs/meetings/` — empty; no meeting recordings provided. No transcription performed.\n  4. `artifacts/inputs/documentation/` — empty; no legacy or supporting documentation provided.\n  5. `artifacts/outputs/plan-design/design-plan-report.md` — not present; treated as absent (no personas/jobs reconciliation pass required).\n  6. `legacy_docs_path` — not provided; greenfield mode confirmed (no brownfield trigger phrases matched in the brief; no legacy docs ingested).\n  \n  ## Extraction Pass\n  - Skipped per execution-protocol §10.2 thresholds: 2 source files, both < 200 lines, cumulative 333 lines (< 500). Sources were read directly during Phase B; no `_extractions/` folder created.\n  \n  ## Decisions Made (CHANGE_LOG)\n  1. Reused the pre-existing `_progress.json` session id `pd-20261027-calc001` (prior run had status RUNNING, skeleton_written false, all sections pending — treated as a fresh SYNTHESIZE with a refreshed real-clock `started_at`).\n  2. Engagement mode detected as greenfield: no brownfield/modernization trigger phrases in the brief; no legacy docs path.\n  3. Extraction pass (§10.2) skipped — inputs below all trigger thresholds (2 files, 144 + 189 lines).\n  4. FR consolidation: 10 FRs, one per independently testable behavior (atomicity rule applied; standard vs advanced operations split; history recording, persistence-failure guarantee, and history retrieval split into FR-06/07/08).\n  5. Priorities (MoSCoW) inferred from source phrasing and tagged as assumption ASM-07 (brief states no explicit priorities).\n  6. NFR sub-category coverage: all five mandatory sub-categories present (performance NFR-01, scalability NFR-04, availability NFR-03, usability NFR-05/NFR-07, security NFR-06). NFR-06 (security) has no source evidence — emitted as `status: pending` with PI-06 per the mandatory sub-category rule.\n  7. Constraints: budget/timeline/resource/regulatory sub-categories have no source evidence — emitted as pending placeholders with interim baselines (PI-10, PI-11) per the Deferral and Fallback Protocol.\n  8. KFM-001/KFM-002 discipline applied: descriptive template fields the inputs never mention (usage_frequency, owner, timeframe, measurement) are written `not stated in inputs` with no registry row; 11 decision-bearing PI rows registered, one per decision, none phrased as a template column name.\n  9. Traceability: all 10 FRs forward-mapped; all 4 JTBDs reverse-mapped; zero orphans, zero unsatisfied jobs.\n  10. `content_hash` computed by running the §10.5.4 recipe (via node after the python3 denial per §10.5.5; identical canonicalization: sha256 over content with the `content_hash:` line omitted): `003b28f772332fba9351dc8d0ecaebd8a5d756d308beaf3f08c573d95b8d298f`.\n  \n  ## Summary Counts\n  - FRs: 10\n  - NFRs: 7\n  - JTBDs: 4\n  - KPIs: 7\n  - open_questions: 18 (11 pending_inputs, 0 traceability_gaps, 7 assumptions_to_validate)\n  - risks: 4\n  - dependencies: 2\n  \n  ## Structured Contract Validation\n  - contract_format: structured — present\n  - AC IDs use `FR-XX-AC-YY` — verified (all 10 FRs carry globally stable AC IDs)\n  - literal_registry: 11 typed literals (LIT-01..LIT-11) covering route, fields, enum, example values, constraints\n  - open_questions: enriched columns (affected_ids, blocking, fallback_behavior) — verified\n  - Traceability: bidirectional, all mapped, zero gaps\n  - No calendar dates/week numbers in output — verified (phases and MoSCoW tiers only)\n- - content_hash: 003b28f772332fba9351dc8d0ecaebd8a5d756d308beaf3f08c573d95b8d298f (sha256 over canonical content excluding the content_hash line, computed by script)\n+ - content_hash: 25c7814b3af060433c725d5e0d92674538e4af564960493da328ea935e63f93a (sha256 over canonical content excluding the content_hash line, computed by script)\n  \n+ ## Repair History\n+ - version: 1.0.1\n+ - timestamp: 2026-10-28T11:52:00Z\n+ - trigger: prd-verification gate verdict FAILED (1 BLOCKER, 1 WARNING) — findings RV2 and RV5 in prd_verification_findings.json\n+ - changed:\n+   - RV2 (BLOCKER): `project_info.client_name` placeholder replaced with a descriptive value derived from the brief's context (internal platform organization; the brief names no client organization) — no other project_info fields touched\n+   - RV5 (WARNING): three bare `status: assumption [ASM-07]` tags in mvp_phasing (phase_1_mvp, phase_2, phase_3) replaced with descriptive status text naming the assumption and pointing to assumptions_to_validate; requirement names were already present alongside every ID\n+ - preserved: all 16 sections, all FR/NFR/JTBD/KPI/RISK/DEP/ASM/LIT/TERM/PI content, traceability tables, open-questions registry, and the SYNTHESIZE-mode derivation unchanged\n+ - content_hash recomputed after edits: 25c7814b3af060433c725d5e0d92674538e4af564960493da328ea935e63f93a\n+ \n  ## Final Status\n  - Spec status: draft (11 pending_inputs registered; zero traceability gaps)\n  - Ready for downstream consumption (Epics, Architecture, Implementation) after open-question resolution.\n  "
+        },
+        {
+          "path": "artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md",
+          "change": "modified",
+          "before_hash": "8e256d4bd6f3f35a8293ff6b3049bddfa33112eccdb18a84226900ff8c6ae33e",
+          "after_hash": "0f7c21140a9df7a00305752bbd60322350767a94ef467de8dacdf08e1ba77114",
+          "preview": "  # Math Operations Microservice (Calc-Service) — PRD Spec\n- version: 1.0.0\n+ version: 1.0.1\n  session: pd-20261027-calc001\n  mode: SYNTHESIZE\n  date: 2026-10-28\n  language: en\n  status: draft\n  contract_format: structured\n- content_hash: 003b28f772332fba9351dc8d0ecaebd8a5d756d308beaf3f08c573d95b8d298f\n+ content_hash: 25c7814b3af060433c725d5e0d92674538e4af564960493da328ea935e63f93a\n  ---\n  \n  ## project_info\n- client_name: not stated in inputs\n+ client_name: Internal platform organization (client organization not named in source inputs; service built for internal platform teams)\n  project_name: Math Operations Microservice (Calc-Service)\n  project_description: A lightweight, stateless microservice that provides a centralized, deterministic mathematical computation capability for the platform, externalizing calculation logic from client applications to enable consistency, reuse, and controlled evolution of numerical behavior across the ecosystem.\n  \n  ---\n  \n  ## scope\n  \n  ### in_scope\n  - Standard arithmetic operations: addition, subtraction, multiplication, division | source: project-brief.md §2 Core Capabilities; discovery-transcript.md §01:30 | status: complete\n  - Advanced operations: exponentiation, roots, trigonometric functions | source: project-brief.md §2 Core Capabilities; discovery-transcript.md §01:30 | status: complete\n  - High-precision internal computation producing deterministic outputs suitable for financial and scientific contexts | source: project-brief.md §2 Precision Strategy; discovery-transcript.md §03:00 | status: complete\n  - Optional history tracking of calculation metadata for traceability and diagnostics, as lightweight local persistence that must not impact response delivery | source: project-brief.md §2 History Tracking; discovery-transcript.md §04:30, §11:00 | status: complete\n  - Calculate operation API: `POST /api/v1/math/calculate` accepting operands and operation, returning result, operation type, and timestamp | source: project-brief.md §4 API Contract; discovery-transcript.md §07:30 | status: complete\n  - History retrieval capability providing recent calculation records for diagnostics and auditing | source: project-brief.md §4 History Retrieval | status: complete\n  - Clear, fail-fast error handling for invalid input (division by zero, unsupported operation) | source: discovery-transcript.md §10:00 | status: complete\n  - Extensibility: new operations added without breaking existing consumers | source: discovery-transcript.md §01:30 | status: complete\n  - Stateless microservice deployment model: independent deployment, horizontally scalable computation layer, no user session ownership | source: project-brief.md §3 Architectural Positioning | status: complete\n  \n  ### out_of_scope\n  - Batch calculations | source: discovery-transcript.md §07:30 (\"Maybe later, not day one\") | status: complete\n  - Expression evaluation (e.g., `\"5 + (3 * 2)\"`) | source: project-brief.md §2 Future Capability (Planned); discovery-transcript.md §07:30 (\"not required now\") | status: complete\n  - Workflow integration with automation agents | source: project-brief.md §2 Future Capability (Planned) | status: complete\n  - Event-based history instead of database persistence | source: project-brief.md §2 Future Capability (Planned) | status: complete\n  - Multi-instance history consistency | source: discovery-transcript.md §11:00 (\"Not required now\") | status: complete\n  - Regulatory-grade audit persistence of every calculation | source: discovery-transcript.md §04:30, §11:00 (\"Not necessarily every one... more diagnostic than regulatory\") | status: complete\n  \n  ### research_methodology\n  - Derived from project brief (v1.1) analysis and one 15-minute discovery transcript with the product owner; no primary user interviews, surveys, or meeting recordings provided; meetings and documentation input folders were empty | source: project-brief.md; discovery-transcript.md | status: complete\n  \n  ---\n  \n  ## personas\n  \n  ### P-01: Backend Service Developer\n  - type: primary\n  - description: Developer building backend services that need consistent mathematical logic and currently face duplicated calculation implementations across systems | source: project-brief.md §3 Primary Consumers; discovery-transcript.md §00:00, §06:00\n  - goals: consume a single, consistent math engine instead of embedding calculation logic in each service; get deterministic results for the same input | source: discovery-transcript.md §00:00, §03:00\n  - pain_points: calculations spread across frontend, backend, and reports; formulas changing break things in different places; rounding differences between systems | source: discovery-transcript.md §00:00, §03:00\n  - technical_proficiency: high (builds and integrates backend services) | status: assumption [ASM-01]\n  - usage_frequency: not stated in inputs\n  - demographics: backend service developer; high technical proficiency; works in a multi-team platform organization with frontend, backend, and reporting teams | source: discovery-transcript.md §00:00, §06:00 | status: assumption [ASM-01]\n  - prioritization_rationale: backend services are the first and primary consumers named by the product owner (\"Backend services first\") | source: discovery-transcript.md §06:00 | status: complete\n  - status: complete\n  - source: project-brief.md §3; discovery-transcript.md §00:00, §03:00, §06:00\n  \n  ### P-02: Automation Workflow Engineer\n  - type: secondary\n  - description: Engineer building automation workflows that call the service synchronously as part of pipelines, including validating outputs inside pipelines | source: project-brief.md §3 Primary Consumers; discovery-transcript.md §06:00, §12:00\n  - goals: reliable, lightweight synchronous calculations inside automated workflows; potential throughput spikes when automation kicks in | source: discovery-transcript.md §06:00, §09:00, §12:00\n  - pain_points: not stated in inputs\n  - technical_proficiency: high (builds automation workflows) | status: assumption [ASM-01]\n  - usage_frequency: not stated in inputs\n  - demographics: automation/workflow engineer; high technical proficiency; operates within platform automation teams | source: discovery-transcript.md §06:00, §12:00 | status: assumption [ASM-01]\n  - status: complete\n  - source: project-brief.md §3; discovery-transcript.md §06:00, §09:00, §12:00\n  \n  ### P-03: AI Agent / AI-Driven Process Operator\n  - type: secondary\n  - description: Operator or maintainer of AI agents performing deterministic calculations as part of AI-driven processes | source: project-brief.md §3 Primary Consumers (\"AI agents performing deterministic calculations\"); discovery-transcript.md §06:00 (\"Possibly AI agents\")\n  - goals: deterministic calculations from an AI-driven process with predictable, repeatable results | source: project-brief.md §3; discovery-transcript.md §03:00\n  - pain_points: not stated in inputs\n  - technical_proficiency: not stated in inputs\n  - usage_frequency: not stated in inputs\n  - demographics: AI agent operator; technical proficiency not stated in inputs; organizational context not stated in inputs | status: assumption [ASM-01]\n  - status: complete\n  - source: project-brief.md §3; discovery-transcript.md §06:00\n  \n  ### P-04: Reporting Pipeline Engineer\n  - type: secondary\n  - description: Engineer building reporting pipelines that consume the calculation service for consistent numerical behavior in reports | source: project-brief.md §3 Primary Consumers; discovery-transcript.md §00:00 (calculations spread across \"even reports\")\n  - goals: consistent numerical results across reporting outputs | source: discovery-transcript.md §00:00, §03:00\n  - pain_points: rounding differences between systems affecting reports | source: discovery-transcript.md §03:00\n  - technical_proficiency: high (builds reporting pipelines) | status: assumption [ASM-01]\n  - usage_frequency: not stated in inputs\n  - demographics: reporting pipeline engineer; high technical proficiency; part of platform reporting function | source: discovery-transcript.md §00:00 | status: assumption [ASM-01]\n  - status: complete\n  - source: project-brief.md §3; discovery-transcript.md §00:00, §03:00\n  \n  ---\n  \n  ## functional_requirements\n  \n  ### FR-01: Execute standard arithmetic operations (addition, subtraction, multiplication, division)\n  - priority: must_have\n  - source: project-brief.md §2 Standard Operations; discovery-transcript.md §01:30 (\"Basic arithmetic first — add, subtract, multiply, divide. That covers most cases.\")\n  - status: complete\n  - design_note: not stated in inputs\n  - depends_on: [none identified]\n  - acceptance_criteria:\n    - FR-01-AC-01: given: the service is running | when: a calculate request is submitted with two numeric operands and operation `ADD` | then: the response returns the sum of the operands as `resultValue`, with `operationType` set to `ADD` and a `timestamp` present\n    - FR-01-AC-02: given: the service is running | when: a calculate request is submitted with operation `SUBTRACT` | then: the response returns the difference of operand1 minus operand2 as `resultValue`\n    - FR-01-AC-03: given: the service is running | when: a calculate request is submitted with operation `MULTIPLY` | then: the response returns the product of the operands as `resultValue`\n    - FR-01-AC-04: given: the service is running | when: a calculate request is submitted with operation `DIVIDE` and a non-zero divisor | then: the response returns the quotient of the operands as `resultValue`\n  \n  ### FR-02: Execute advanced operations (exponentiation, roots, trigonometric functions)\n  - priority: should_have\n  - source: project-brief.md §2 Advanced Operations; discovery-transcript.md §01:30 (\"powers, square roots, some trigonometry\")\n  - status: complete\n  - design_note: not stated in inputs\n  - depends_on: [FR-01]\n  - acceptance_criteria:\n    - FR-02-AC-01: given: the service is running | when: a calculate request is submitted with an exponentiation operation | then: the response returns the exponentiation result as `resultValue`\n    - FR-02-AC-02: given: the service is running | when: a calculate request is submitted with a root operation | then: the response returns the root result as `resultValue`\n    - FR-02-AC-03: given: the service is running | when: a calculate request is submitted with a trigonometric operation | then: the response returns the trigonometric result as `resultValue`\n    - FR-02-AC-04: given: the service is running | when: a calculate request is submitted with an advanced operation not yet supported by the service | then: the service returns a clear error identifying the unsupported operation\n  \n  ### FR-03: Produce deterministic, high-precision results\n  - priority: must_have\n  - source: project-brief.md §2 Precision Strategy, §5 Determinism; discovery-transcript.md §03:00 (\"deterministic outputs for the same input\", \"We don't want floating-point surprises\")\n  - status: complete\n  - design_note: high-precision internal computation is the stated mechanism to reduce rounding inconsistencies; the concrete precision policy (decimal digits, rounding mode) is not stated in inputs | status: pending\n  - depends_on: [FR-01]\n  - acceptance_criteria:\n    - FR-03-AC-01: given: any supported operation | when: the same request is submitted repeatedly | then: the response returns the identical `resultValue` every time\n    - FR-03-AC-02: given: two different client systems submit the same calculation | when: both responses are compared | then: both return the identical `resultValue` with no rounding differences between systems\n  \n  ### FR-04: Expose a calculate operation via `POST /api/v1/math/calculate`\n  - priority: must_have\n  - source: project-brief.md §4 API Contract; discovery-transcript.md §07:30 (\"Simple. Send operands and operation, get result. No complex payloads.\")\n  - status: complete\n  - design_note: request/response field names `operand1`, `operand2`, `operation`, `resultValue`, `operationType`, `timestamp` are taken verbatim from the brief's conceptual contract | status: assumption [ASM-02]\n  - depends_on: [FR-01]\n  - acceptance_criteria:\n    - FR-04-AC-01: given: the service is running | when: a request is sent to `POST /api/v1/math/calculate` with body `{\"operand1\": 10.5, \"operand2\": 5.0, \"operation\": \"ADD\"}` | then: the response contains `resultValue: 15.5`, `operationType: \"ADD\"`, and a `timestamp` value\n    - FR-04-AC-02: given: the service is running | when: a calculate request is submitted | then: the response contains only the simple result payload (result, operation type, timestamp) with no complex payload structure\n  \n  ### FR-05: Return clear, fail-fast errors for invalid input\n  - priority: must_have\n  - source: discovery-transcript.md §10:00 (\"Clear errors. Division by zero, unsupported operation — that kind of thing.\" / \"Strict validation? Yes. Fail fast.\")\n  - status: complete\n  - design_note: not stated in inputs\n  - depends_on: [FR-01]\n  - acceptance_criteria:\n    - FR-05-AC-01: given: the service is running | when: a calculate request is submitted with operation `DIVIDE` and operand2 equal to zero | then: the service returns a clear error identifying division by zero and does not return a numeric result\n    - FR-05-AC-02: given: the service is running | when: a calculate request is submitted with an operation value the service does not support | then: the service returns a clear error identifying the unsupported operation\n    - FR-05-AC-03: given: the service is running | when: a calculate request is submitted with missing or non-numeric operands | then: the service rejects the request with a clear validation error before any computation\n  \n  ### FR-06: Record calculation history as optional, auxiliary local persistence\n  - priority: could_have\n  - source: project-brief.md §2 History Tracking; discovery-transcript.md §04:30 (\"we want the ability to log calculations when needed — mainly debugging and traceability\"), §11:00 (\"persistence is auxiliary\")\n  - status: complete\n  - design_note: implemented as lightweight local persistence via an embedded database abstraction; persistence can be replaced without changing the API contract | status: assumption [ASM-03]\n  - depends_on: [FR-01]\n  - acceptance_criteria:\n    - FR-06-AC-01: given: history tracking is enabled | when: a calculation is executed | then: calculation metadata is recorded for traceability and diagnostics\n    - FR-06-AC-02: given: history tracking is enabled | when: a calculation is executed | then: the history write does not delay or block delivery of the calculation response\n    - FR-06-AC-03: given: history tracking is disabled or not configured | when: a calculation is executed | then: the calculation still executes and returns a result normally\n  \n  ### FR-07: Calculation must succeed even if history persistence fails\n  - priority: must_have\n  - source: project-brief.md §5 Reliability; discovery-transcript.md §04:30 (\"If persistence fails, should the calculation still return?\" / \"Yes, always.\"), §15:00 (\"Persistence must never block calculation\")\n  - status: complete\n  - design_note: not stated in inputs\n  - depends_on: [FR-06]\n  - acceptance_criteria:\n    - FR-07-AC-01: given: history persistence is failing or unavailable | when: a valid calculate request is submitted | then: the calculation still succeeds and returns the correct result to the caller\n  \n  ### FR-08: Provide history retrieval of recent calculation records\n  - priority: could_have\n  - source: project-brief.md §4 History Retrieval (\"Provides recent calculation records for diagnostics and auditing\")\n  - status: complete\n  - design_note: the retrieval endpoint path and response shape are not stated in inputs | status: pending\n  - depends_on: [FR-06]\n  - acceptance_criteria:\n    - FR-08-AC-01: given: history tracking is enabled and calculations have been executed | when: a history retrieval request is submitted | then: the service returns recent calculation records for diagnostics and auditing\n  \n  ### FR-09: Support extensibility so new operations are added without breaking existing consumers\n  - priority: must_have\n  - source: discovery-transcript.md §01:30 (\"Definitely. New operations will be added without breaking existing consumers.\")\n  - status: complete\n  - design_note: not stated in inputs\n  - depends_on: [FR-01]\n  - acceptance_criteria:\n    - FR-09-AC-01: given: existing consumers are integrated against the calculate operation | when: a new operation is added to the service | then: existing consumers continue to receive correct results for previously supported operations with no contract change\n  \n  ### FR-10: Operate as a stateless, independently deployable, horizontally scalable service\n  - priority: must_have\n  - source: project-brief.md §3 Architectural Positioning (\"Independent deployment\", \"Horizontally scalable computation layer\", \"No user session ownership\")\n  - status: complete\n  - design_note: stateless design is the stated mechanism enabling horizontal scaling | status: assumption [ASM-04]\n  - depends_on: [none identified]\n  - acceptance_criteria:\n    - FR-10-AC-01: given: multiple service instances are deployed | when: calculate requests are distributed across instances | then: each request is served independently with no user session ownership and identical results for identical inputs\n    - FR-10-AC-02: given: the service is deployed | when: the service is deployed or scaled independently of other platform components | then: calculation behavior is unchanged\n  \n  ---\n  \n  ## non_functional_requirements\n  \n  ### NFR-01: Standard operations respond at millisecond-level latency\n  - category: performance\n  - target: response time at millisecond level for standard operations [PENDING: exact numeric threshold] \n  - source: project-brief.md §5 Latency (\"Millisecond-level response time for standard operations\"); discovery-transcript.md §09:00 (\"It should feel instant. This isn't heavy computation.\")\n  - status: pending\n  - design_note: not stated in inputs\n  \n  ### NFR-02: Same input always produces the same result (determinism)\n  - category: compliance\n  - target: 100% of repeated identical requests return the identical resultValue\n  - source: project-brief.md §5 Determinism; discovery-transcript.md §03:00\n  - status: complete\n  - design_note: not stated in inputs\n  \n  ### NFR-03: Calculation succeeds even when history persistence fails\n  - category: availability\n  - target: 100% of valid calculate requests return a result when history persistence is unavailable\n  - source: project-brief.md §5 Reliability; discovery-transcript.md §04:30, §15:00\n  - status: complete\n  - design_note: behavioral guarantee mirrored as FR-07; retained here as the availability-level statement of the same guarantee | status: assumption [ASM-05]\n  \n  ### NFR-04: Stateless design supports horizontal scaling\n  - category: scalability\n  - target: service capacity scales horizontally by adding instances with no change to calculation behavior [PENDING: numeric concurrency/volume target]\n  - source: project-brief.md §5 Scalability, §3 Architectural Positioning; discovery-transcript.md §09:00 (\"Possibly if automation kicks in, but calculations are lightweight\")\n  - status: pending\n  - design_note: not stated in inputs\n  \n  ### NFR-05: Observability readiness for future metrics and tracing integration\n  - category: usability\n  - target: [PENDING: nfr_target — no measurable observability target stated in inputs]\n  - source: project-brief.md §5 Observability readiness (\"Designed for future metrics and tracing integration\")\n  - status: pending\n  - design_note: not stated in inputs\n  \n  ### NFR-06: Security and access control for the calculation API\n  - category: security\n  - target: [PENDING: nfr_target — no security requirement stated in inputs]\n  - source: not stated in inputs\n  - status: pending\n  - design_note: not stated in inputs\n  \n  ### NFR-07: API usability for internal consumers\n  - category: usability\n  - target: [PENDING: nfr_target — no usability/accessibility standard stated in inputs]\n  - source: discovery-transcript.md §07:30 (\"Simple. Send operands and operation, get result.\"), §13:30 (\"it must be simple or teams won't use it\")\n  - status: pending\n  - design_note: not stated in inputs\n  \n  ---\n  \n  ## kpis\n  \n  ### KPI-01: Upstream system integration adoption\n  - target: at least 1 upstream system successfully integrated\n  - measurement: count of upstream systems integrated with the calculate operation\n  - timeframe: not stated in inputs\n  - source: project-brief.md §7 Success Criteria (\"Service successfully integrated by at least one upstream system\")\n  - status: complete\n  \n  ### KPI-02: Deterministic test coverage of all operations\n  - target: 100% of supported operations covered by deterministic unit tests\n  - measurement: deterministic unit test coverage report across all operations\n  - timeframe: not stated in inputs\n  - source: project-brief.md §7 Success Criteria (\"Deterministic unit test coverage for all operations\")\n  - status: complete\n  \n  ### KPI-03: History persistence validation\n  - target: optional history persistence validated\n  - measurement: validation run confirming history persistence works without impacting response delivery\n  - timeframe: not stated in inputs\n  - source: project-brief.md §7 Success Criteria (\"Optional history persistence validated\")\n  - status: complete\n  \n  ### KPI-04: API contract documentation for internal reuse\n  - target: API contract documented for internal reuse\n  - measurement: published API contract documentation available to internal consumers\n  - timeframe: not stated in inputs\n  - source: project-brief.md §7 Success Criteria (\"API contract documented for internal reuse\")\n  - status: complete\n  \n  ### KPI-05: Reduction of duplicated math logic across teams\n  - target: [PENDING: numeric target — success criterion stated qualitatively (\"Teams stop duplicating math logic\")]\n  - measurement: not stated in inputs\n  - timeframe: not stated in inputs\n  - source: discovery-transcript.md §14:30 (\"Teams stop duplicating math logic\")\n  - status: pending\n  \n  ### KPI-06: Result consistency across systems\n  - target: [PENDING: numeric target — success criterion stated qualitatively (\"Results become consistent\")]\n  - measurement: not stated in inputs\n  - timeframe: not stated in inputs\n  - source: discovery-transcript.md §14:30 (\"Results become consistent\")\n  - status: pending\n  \n  ### KPI-07: Calculation traceability availability\n  - target: [PENDING: numeric target — success criterion stated qualitatively (\"We can trace calculations when something looks wrong\")]\n  - measurement: not stated in inputs\n  - timeframe: not stated in inputs\n  - source: discovery-transcript.md §14:30 (\"We can trace calculations when something looks wrong\")\n  - status: pending\n  \n  ---\n  \n  ## jtbd\n  \n  ### JTBD-01: core_functional\n  - situation: when a backend service, report, or workflow needs a calculation performed, the calculation logic is currently duplicated across frontend, backend, and reporting systems | source: discovery-transcript.md §00:00\n  - motivation: obtain a consistent, correct numerical result from a single authoritative math engine instead of maintaining formula logic in each consumer | source: discovery-transcript.md §00:00; project-brief.md §1 Business Objective\n  - outcome: the caller receives a deterministic result for the operation requested, identical to what any other system would receive for the same input | source: discovery-transcript.md §03:00; project-brief.md §5 Determinism\n  - source: discovery-transcript.md §00:00, §03:00; project-brief.md §1, §5\n  - status: complete\n  \n  ### JTBD-02: related\n  - situation: when a formula or numerical behavior changes, each system that embedded its own calculation logic must be found and fixed individually, and changes break things in different places | source: discovery-transcript.md §00:00\n  - motivation: evolve numerical behavior in one controlled place so changes propagate consistently across the ecosystem | source: project-brief.md §1 (\"controlled evolution of numerical behavior\"); discovery-transcript.md §00:00\n  - outcome: calculation logic is updated once in the central service and all consumers immediately use the same updated behavior without breaking existing consumers | source: discovery-transcript.md §01:30; project-brief.md §1\n  - source: discovery-transcript.md §00:00, §01:30; project-brief.md §1\n  - status: complete\n  \n  ### JTBD-03: related\n  - situation: when a calculation result looks wrong, an engineer needs to understand what the service computed and why | source: discovery-transcript.md §04:30, §14:30\n  - motivation: trace and debug calculations through recorded calculation metadata without coupling persistence to computation | source: discovery-transcript.md §04:30 (\"mainly debugging and traceability\"); project-brief.md §2 History Tracking\n  - outcome: recent calculation records are available for diagnostics and auditing, and retrieving them never degrades the calculation itself | source: project-brief.md §2 History Tracking, §4 History Retrieval; discovery-transcript.md §04:30, §11:00\n  - source: discovery-transcript.md §04:30, §11:00, §14:30; project-brief.md §2, §4\n  - status: complete\n  \n  ### JTBD-04: related\n  - situation: when an automated workflow or AI-driven process runs, it needs lightweight deterministic calculations performed synchronously as part of the pipeline | source: discovery-transcript.md §06:00, §09:00, §12:00\n  - motivation: validate outputs and perform computations inside pipelines using a stable, reusable computation service rather than bespoke logic | source: discovery-transcript.md §12:00 (\"Potentially as part of automated workflows — like validating outputs inside pipelines\"); project-brief.md §1\n  - outcome: automation workflows and AI agents obtain instant, deterministic calculation results as a foundational building block for AI-assisted workflows | source: discovery-transcript.md §06:00, §09:00; project-brief.md §6\n  - source: discovery-transcript.md §06:00, §09:00, §12:00; project-brief.md §1, §6\n  - status: complete\n  \n  ---\n  \n  ## traceability\n  \n  | FR | fr_name | JTBD | jtbd_name | direction | status |\n  |----|---------|------|-----------|-----------|--------|\n  | FR-01 | Execute standard arithmetic operations (addition, subtraction, multiplication, division) | JTBD-01 | core_functional | forward | mapped |\n  | FR-02 | Execute advanced operations (exponentiation, roots, trigonometric functions) | JTBD-01 | core_functional | forward | mapped |\n  | FR-03 | Produce deterministic, high-precision results | JTBD-01 | core_functional | forward | mapped |\n  | FR-04 | Expose a calculate operation via `POST /api/v1/math/calculate` | JTBD-01 | core_functional | forward | mapped |\n  | FR-05 | Return clear, fail-fast errors for invalid input | JTBD-01 | core_functional | forward | mapped |\n  | FR-06 | Record calculation history as optional, auxiliary local persistence | JTBD-03 | related | forward | mapped |\n  | FR-07 | Calculation must succeed even if history persistence fails | JTBD-03 | related | forward | mapped |\n  | FR-08 | Provide history retrieval of recent calculation records | JTBD-03 | related | forward | mapped |\n  | FR-09 | Support extensibility so new operations are added without breaking existing consumers | JTBD-02 | related | forward | mapped |\n  | FR-10 | Operate as a stateless, independently deployable, horizontally scalable service | JTBD-04 | related | forward | mapped |\n  | — | — | JTBD-01 | core_functional | reverse | mapped |\n  | — | — | JTBD-02 | related | reverse | mapped |\n  | — | — | JTBD-03 | related | reverse | mapped |\n  | — | — | JTBD-04 | related | reverse | mapped |\n  \n  ---\n  \n  ## dependencies\n  \n  ### DEP-01: Upstream consumer systems\n  - type: external\n  - description: at least one upstream system (backend service, reporting pipeline, automation workflow, or AI agent) must integrate with the calculate operation for the service to deliver value | source: project-brief.md §7 Success Criteria\n  - owner: not stated in inputs\n  - impact_if_unavailable: no consumer integration means the service delivers no business value regardless of correctness | source: project-brief.md §7\n  - source: project-brief.md §7 Success Criteria\n  - status: pending\n  \n  ### DEP-02: Embedded persistence abstraction for optional history\n  - type: technical\n  - description: optional history tracking relies on a lightweight local persistence behind an embedded database abstraction, replaceable without changing the API contract | source: project-brief.md §2 History Tracking, §3 Architectural Positioning\n  - owner: not stated in inputs\n  - impact_if_unavailable: history tracking and history retrieval (FR-06, FR-08) cannot be delivered; calculations themselves are unaffected because persistence must never block calculation (FR-07) | source: project-brief.md §2, §5\n  - source: project-brief.md §2, §3, §5\n  - status: complete\n  \n  ### inter_feature_dependencies\n  - FR-02 (Execute advanced operations) depends_on FR-01 (Execute standard arithmetic operations): advanced operations extend the same calculate operation contract established by standard operations | source: project-brief.md §2; discovery-transcript.md §01:30 | status: complete\n  - FR-03 (Produce deterministic, high-precision results) depends_on FR-01 (Execute standard arithmetic operations): determinism applies to the operations FR-01 defines | source: project-brief.md §2, §5 | status: complete\n  - FR-04 (Expose a calculate operation via `POST /api/v1/math/calculate`) depends_on FR-01 (Execute standard arithmetic operations): the endpoint exposes the operations FR-01 defines | source: project-brief.md §4 | status: complete\n  - FR-05 (Return clear, fail-fast errors for invalid input) depends_on FR-01 (Execute standard arithmetic operations): error handling governs requests against the calculate operation | source: discovery-transcript.md §10:00 | status: complete\n  - FR-06 (Record calculation history as optional, auxiliary local persistence) depends_on FR-01 (Execute standard arithmetic operations): history records metadata of calculations performed via the calculate operation | source: project-brief.md §2 | status: complete\n  - FR-07 (Calculation must succeed even if history persistence fails) depends_on FR-06 (Record calculation history as optional, auxiliary local persistence): the persistence-failure guarantee is meaningful only when history recording exists | source: project-brief.md §5 Reliability | status: complete\n  - FR-08 (Provide history retrieval of recent calculation records) depends_on FR-06 (Record calculation history as optional, auxiliary local persistence): retrieval requires recorded history | source: project-brief.md §4 | status: complete\n  - FR-09 (Support extensibility so new operations are added without breaking existing consumers) depends_on FR-01 (Execute standard arithmetic operations): extensibility preserves the contract FR-01 establishes | source: discovery-transcript.md §01:30 | status: complete\n  \n  ---\n  \n  ## risks\n  \n  ### RSK-01: Hidden logic differences remain between systems after the service launches\n  - likelihood: medium\n  - impact: high\n  - mitigation: centralize all calculation logic in the service and enforce deterministic, high-precision computation (FR-03) so all systems receive identical results; validate with deterministic unit test coverage for all operations (KPI-02)\n  - source: discovery-transcript.md §13:30 (\"Hidden logic differences between systems\")\n  - status: complete\n  \n  ### RSK-02: Teams bypass the service and keep embedding their own calculation logic\n  - likelihood: medium\n  - impact: high\n  - mitigation: keep the API simple — send operands and operation, get result — because adoption depends on simplicity (\"it must be simple or teams won't use it\"); document the API contract for internal reuse (KPI-04)\n  - source: discovery-transcript.md §13:30 (\"people bypassing the service\", \"it must be simple or teams won't use it\")\n  - status: complete\n  \n  ### RSK-03: History persistence degrades calculation response delivery\n  - likelihood: low\n  - impact: medium\n  - mitigation: treat persistence as auxiliary storage that must not impact response delivery (FR-06, FR-07); calculation must always succeed even if persistence fails\n  - source: project-brief.md §2 History Tracking, §5 Reliability; discovery-transcript.md §04:30, §15:00\n  - status: complete\n  \n  ### RSK-04: Precision policy gaps reintroduce floating-point surprises between systems\n  - likelihood: medium\n  - impact: medium\n  - mitigation: define and apply a single high-precision internal computation strategy (FR-03); the concrete precision policy (decimal digits, rounding mode) still needs to be fixed before implementation (PI-01)\n  - source: discovery-transcript.md §03:00 (\"Some teams complained about rounding differences between systems\", \"We don't want floating-point surprises\")\n  - status: complete\n  \n  ---\n  \n  ## assumptions\n  \n  ### ASM-01: Consumer personas are technically proficient engineering roles\n  - impact_if_wrong: persona goals, pain points, and usage patterns may not reflect actual consumer behavior, skewing prioritization of API usability work\n  - source_basis: inferred from the consumer types named in project-brief.md §3 (backend services, reporting pipelines, automation workflows, AI agents) and discovery-transcript.md §06:00\n  - status: active\n  \n  ### ASM-02: The brief's conceptual API contract field names are the intended contract names\n  - impact_if_wrong: FR-04 acceptance criteria and downstream API documentation would use field names that differ from the final implemented contract\n  - source_basis: project-brief.md §4 API Contract (input fields `operand1`, `operand2`, `operation`; output fields `resultValue`, `operationType`, `timestamp`) — labeled \"Conceptual\" in the brief\n  - status: active\n  \n  ### ASM-03: History persistence uses a lightweight local embedded database abstraction\n  - impact_if_wrong: the persistence design, deployment footprint, and replaceability guarantees in FR-06 would need rework\n  - source_basis: project-brief.md §2 History Tracking (\"lightweight local persistence\"), §3 (\"Optional local persistence via embedded database abstraction\"), and the brief's alignment note (\"H2-based lightweight persistence strategy\")\n  - status: active\n  \n  ### ASM-04: Stateless design is the mechanism that enables horizontal scaling\n  - impact_if_wrong: scaling behavior would depend on stateful components, invalidating FR-10 acceptance criteria\n  - source_basis: project-brief.md §3 (\"stateless microservice model\", \"Horizontally scalable computation layer\"), §5 (\"Stateless design allows horizontal scaling\")\n  - status: active\n  \n  ### ASM-05: The reliability guarantee is stated at both FR and NFR level intentionally\n  - impact_if_wrong: duplicate coverage of the same guarantee could cause inconsistent verification; if unintended, NFR-03 should be merged into FR-07\n  - source_basis: project-brief.md §5 Reliability states the guarantee as a non-functional goal; FR-07 carries the behavioral statement\n  - status: active\n  \n  ### ASM-06: Synchronous request/response is the only interaction mode required at launch\n  - impact_if_wrong: asynchronous or batch interaction modes would require additional API surface not covered by FR-04\n  - source_basis: discovery-transcript.md §06:00 (\"Real-time usage?\" / \"Mostly synchronous, yes.\"); batch calculations explicitly deferred (\"Maybe later, not day one\")\n  - status: active\n  \n  ### ASM-07: MoSCoW priorities inferred from source phrasing\n  - impact_if_wrong: phasing in mvp_phasing would change; operations or capabilities assumed must-have could be deferred or vice versa\n  - source_basis: inferred from project-brief.md §2 (\"Standard Operations\" listed first, \"History Tracking (Optional)\", \"Future Capability (Planned)\") and discovery-transcript.md §01:30 (\"Basic arithmetic first\"), §07:30 (\"Maybe later, not day one\")\n  - status: active\n  \n  ---\n  \n  ## constraints\n  \n  ### budget\n  - [PENDING: budget_constraints] | value: \"unknown — stakeholder input required\" | status: pending\n  \n  ### timeline\n  - [PENDING: timeline_constraints] | value: \"unknown — stakeholder input required\" | status: pending\n  \n  ### resource\n  - [PENDING: resource_constraints] | value: \"unknown — stakeholder input required\" | status: pending\n  \n  ### regulatory\n  - [PENDING: regulatory_constraints] | status: pending\n  \n  ### organizational\n  - History is diagnostic, not regulatory: history tracking is not required to meet a regulatory audit obligation | source: discovery-transcript.md §11:00 (\"History is more diagnostic than regulatory\") | status: complete\n  - Persistence must be replaceable without changing the API contract | source: project-brief.md §3 (\"persistence can be replaced without changing the API contract\") | status: complete\n  \n  ---\n  \n  ## mvp_phasing\n  \n  ### phase_1_mvp\n- - must_have: FR-01 (Execute standard arithmetic operations), FR-03 (Produce deterministic, high-precision results), FR-04 (Expose a calculate operation via `POST /api/v1/math/calculate`), FR-05 (Return clear, fail-fast errors for invalid input), FR-09 (Support extensibility so new operations are added without breaking existing consumers), FR-10 (Operate as a stateless, independently deployable, horizontally scalable service) | source: project-brief.md §2 Standard Operations, §4 API Contract, §5; discovery-transcript.md §01:30 (\"Basic arithmetic first\"), §10:00, §13:30 | status: assumption [ASM-07]\n+ - must_have: FR-01 (Execute standard arithmetic operations), FR-03 (Produce deterministic, high-precision results), FR-04 (Expose a calculate operation via `POST /api/v1/math/calculate`), FR-05 (Return clear, fail-fast errors for invalid input), FR-09 (Support extensibility so new operations are added without breaking existing consumers), FR-10 (Operate as a stateless, independently deployable, horizontally scalable service) | source: project-brief.md §2 Standard Operations, §4 API Contract, §5; discovery-transcript.md §01:30 (\"Basic arithmetic first\"), §10:00, §13:30 | status: assumption — priorities inferred from source phrasing, pending product-owner confirmation (see assumptions_to_validate)\n  \n  ### phase_2\n- - should_have: FR-02 (Execute advanced operations) | source: project-brief.md §2 Advanced Operations; discovery-transcript.md §01:30 (\"powers, square roots, some trigonometry\" listed after basic arithmetic) | status: assumption [ASM-07]\n+ - should_have: FR-02 (Execute advanced operations) | source: project-brief.md §2 Advanced Operations; discovery-transcript.md §01:30 (\"powers, square roots, some trigonometry\" listed after basic arithmetic) | status: assumption — priorities inferred from source phrasing, pending product-owner confirmation (see assumptions_to_validate)\n  \n  ### phase_3\n- - could_have: FR-06 (Record calculation history as optional, auxiliary local persistence), FR-08 (Provide history retrieval of recent calculation records) | source: project-brief.md §2 History Tracking (Optional), §4 History Retrieval (Optional); discovery-transcript.md §04:30 (\"Not necessarily every one\") | status: assumption [ASM-07]\n+ - could_have: FR-06 (Record calculation history as optional, auxiliary local persistence), FR-08 (Provide history retrieval of recent calculation records) | source: project-brief.md §2 History Tracking (Optional), §4 History Retrieval (Optional); discovery-transcript.md §04:30 (\"Not necessarily every one\") | status: assumption — priorities inferred from source phrasing, pending product-owner confirmation (see assumptions_to_validate)\n  \n  ### deferred\n  - wont_have: batch calculations, expression evaluation, workflow integration with automation agents, event-based history | source: project-brief.md §2 Future Capability (Planned); discovery-transcript.md §07:30 (\"Maybe later, not day one\", \"not required now\") | status: complete\n  \n  ### sequencing_notes\n  - FR-07 (Calculation must succeed even if history persistence fails) requires FR-06 (Record calculation history as optional, auxiliary local persistence) to exist before its guarantee is testable | source: project-brief.md §5 Reliability | status: complete\n  - FR-08 (Provide history retrieval of recent calculation records) depends on FR-06 (Record calculation history as optional, auxiliary local persistence) completion | source: project-brief.md §4 | status: complete\n  - FR-02 (Execute advanced operations) extends FR-01 (Execute standard arithmetic operations) and follows it in delivery order | source: discovery-transcript.md §01:30 | status: complete\n  \n  ---\n  \n  ## literal_registry\n  \n  | id | name | exact_value | type | applies_to_ids | source_ref |\n  |----|------|-------------|------|----------------|------------|\n  | LIT-01 | calculate endpoint route | POST /api/v1/math/calculate | route | FR-04, FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-02 | request field: operand1 | operand1 | field | FR-04, FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-03 | request field: operand2 | operand2 | field | FR-04, FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-04 | request field: operation | operation | field | FR-04, FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-05 | response field: resultValue | resultValue | field | FR-01, FR-04, FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-06 | response field: operationType | operationType | field | FR-01, FR-04, FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-07 | response field: timestamp | timestamp | field | FR-04, FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-08 | operation enum: ADD | ADD | enum | FR-01, FR-01-AC-01, FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-09 | example request values | operand1: 10.5, operand2: 5.0, operation: ADD → resultValue: 15.5 | other | FR-04-AC-01 | project-brief.md §4 API Contract |\n  | LIT-10 | latency goal | millisecond-level response time for standard operations | constraint | NFR-01 | project-brief.md §5 Non-Functional Goals |\n  | LIT-11 | persistence strategy | H2-based lightweight persistence strategy | constraint | FR-06, ASM-03 | project-brief.md alignment note (v1.1) |\n  \n  ---\n  \n  ## glossary\n  \n  | term_id | term | definition | first_used | source_ref |\n  |---------|------|------------|------------|------------|\n  | TERM-01 | Calc-Service | The math operations microservice: a lightweight, stateless microservice providing centralized mathematical computation for the platform | project_info | project-brief.md Overview |\n  | TERM-02 | math engine | The deterministic computation core of Calc-Service consumed by backend services, automation workflows, and AI-driven processes | project_info | project-brief.md Overview |\n  | TERM-03 | standard operations | The four basic arithmetic operations: addition, subtraction, multiplication, division | scope | project-brief.md §2 Standard Operations |\n  | TERM-04 | advanced operations | Exponentiation, roots, and trigonometric functions beyond the standard operations | scope | project-brief.md §2 Advanced Operations |\n  | TERM-05 | history tracking | Optional recording of calculation metadata for traceability and diagnostics, implemented as lightweight local auxiliary persistence | scope | project-brief.md §2 History Tracking |\n  | TERM-06 | history retrieval | Capability providing recent calculation records for diagnostics and auditing | scope | project-brief.md §4 History Retrieval |\n  | TERM-07 | determinism | Property that the same input always produces the same result | non_functional_requirements | project-brief.md §5 Determinism |\n  | TERM-08 | embedded database abstraction | The replaceable local persistence layer behind history tracking; persistence can be replaced without changing the API contract | dependencies | project-brief.md §3 Architectural Positioning |\n  | TERM-09 | calculate operation | The primary API operation exposed at `POST /api/v1/math/calculate` accepting operands and an operation and returning a result | functional_requirements | project-brief.md §4 API Contract |\n  \n  ---\n  \n  ## open_questions\n  \n  This section is the **single consolidated registry** of all unresolved items.\n  Every `[PENDING]` marker, every `orphan` traceability entry, every `assumption`\n  that needs validation — all appear here once.\n  \n  Downstream skills (Epics, User Stories, Architecture, Implementation) read\n  ONLY this section to understand what is unresolved. They do NOT scan other\n  sections for [PENDING] markers — this registry IS the source of truth.\n  \n  ### pending_inputs\n  \n  | id | affected_ids | blocking | type | section | item_id | field | impact | question | fallback_behavior | source_ref |\n  |----|--------------|----------|------|---------|---------|-------|--------|----------|-------------------|------------|\n  | PI-01 | FR-03, FR-03-AC-01, FR-03-AC-02, RSK-04 | no | missing | functional_requirements | FR-03 | design_note (precision policy) | HIGH | What precision policy (number of decimal digits and rounding mode) must the high-precision internal computation apply so results are identical across systems? | Deferred to Discovery; interim baseline: a single high-precision decimal computation strategy is applied service-wide and treated as an implementation detail until stated | project-brief.md §2 Precision Strategy; discovery-transcript.md §03:00 |\n  | PI-02 | FR-08, FR-08-AC-01 | no | missing | functional_requirements | FR-08 | design_note (retrieval contract) | MEDIUM | What is the history retrieval contract — endpoint path, response shape, and how many recent records are returned? | Deferred to Discovery; interim baseline: FR-08 is emitted with status pending and no endpoint contract; history retrieval is excluded from the MVP phase | project-brief.md §4 History Retrieval |\n  | PI-03 | NFR-01 | no | missing | non_functional_requirements | NFR-01 | target | HIGH | What numeric latency threshold should \"millisecond-level response time\" commit to for standard operations? | Deferred to Discovery; interim baseline: millisecond-level interpreted as sub-second response (< 1000 ms) for standard operations | project-brief.md §5 Latency; discovery-transcript.md §09:00 |\n  | PI-04 | NFR-04 | no | missing | non_functional_requirements | NFR-04 | target | MEDIUM | What concurrency or request-volume target must horizontal scaling support? | Deferred to Discovery; interim baseline: horizontal scaling by adding instances with no numeric concurrency target committed | project-brief.md §5 Scalability; discovery-transcript.md §09:00 |\n  | PI-05 | NFR-05 | no | missing | non_functional_requirements | NFR-05 | target | MEDIUM | What observability capability must be ready at launch — structured logs only, or also metrics and tracing hooks? | Deferred to Discovery; interim baseline: structured logging sufficient for diagnostics; metrics and tracing integration deferred | project-brief.md §5 Observability readiness |\n  | PI-06 | NFR-06 | no | missing | non_functional_requirements | NFR-06 | target | HIGH | What security and access-control requirements apply to the calculation API (authentication, network exposure, input limits)? | Deferred to Discovery; interim baseline: service treated as an internal platform component with no additional authentication assumed | not stated in inputs |\n  | PI-07 | NFR-07 | no | missing | non_functional_requirements | NFR-07 | target | LOW | What usability standard should the API contract commit to, given adoption depends on simplicity? | Deferred to Discovery; interim baseline: simple payload design (operands + operation in, result out) treated as the usability baseline | discovery-transcript.md §07:30, §13:30 |\n  | PI-08 | KPI-05, KPI-06, KPI-07 | no | missing | kpis | KPI-05, KPI-06, KPI-07 | target | MEDIUM | What numeric targets should replace the qualitative success criteria (teams stop duplicating math logic, results become consistent, calculations traceable)? | Deferred to Discovery; interim baseline: qualitative success criteria tracked as binary (met / not met) until numeric targets are set | discovery-transcript.md §14:30 |\n  | PI-09 | DEP-01, KPI-01 | no | missing | dependencies | DEP-01 | owner | MEDIUM | Which upstream system is the first integration target for the calculate operation? | Deferred to Discovery; interim baseline: any one upstream system qualifies for the success criterion; integration sequencing left to delivery planning | project-brief.md §7 Success Criteria |\n  | PI-10 | constraints.budget, constraints.timeline, constraints.resource | no | missing | constraints | budget, timeline, resource | value | MEDIUM | What are the budget, timeline, and staffing constraints for delivering the service? | Deferred to Discovery; interim baseline: no budget ceiling, no calendar deadline, and no staffing cap assumed; scope treated as uncapped until stated | not stated in inputs |\n  | PI-11 | constraints.regulatory | no | missing | constraints | regulatory | constraint | LOW | Are there regulatory or compliance obligations that apply to the service or its calculation records? | Deferred to Discovery; interim baseline: no regulatory constraints assumed; history treated as diagnostic-only per the discovery transcript | discovery-transcript.md §11:00 (\"History is more diagnostic than regulatory\") |\n  \n  ### traceability_gaps\n  \n  | id | affected_ids | blocking | direction | fr_id | jtbd_id | impact | note | fallback_behavior | source_ref |\n  |----|--------------|----------|-----------|-------|---------|--------|------|-------------------|------------|\n  \n  ### assumptions_to_validate\n  \n  | id | affected_ids | blocking | assumption | impact_if_wrong | validation_method | fallback_behavior | source_ref |\n  |----|--------------|----------|------------|-----------------|--"
+        }
+      ],
+      "exec_log_latest_completed_at": "2026-10-28T11:38:23.764Z"
+    },
+    "prd-verification": {
+      "status": "completed",
+      "notes": "",
+      "exec_log_latest_executor": "app",
+      "app_session": {
+        "app_id": "prd-validation",
+        "interaction": "headless",
+        "status": "completed",
+        "session_key": "1793187505892-7mvbosas",
+        "workspace_path": "C:\\IA Trainings\\CalcService\\workflow\\instances\\product-definition\\sessions\\product-calcservice\\app-sessions\\prd-verification\\round-0",
+        "staged_inputs": {
+          "prd_path": "./artifacts/outputs/product-definition/prd"
+        },
+        "started_at": "2026-10-28T11:38:25.892Z",
+        "headless_run_id": "1793187505892-7mvbosas",
+        "round": 0
+      },
+      "open_questions_delivered_at": "2026-10-28T11:38:26.212Z",
+      "gate_reject_signature": "b6043fd8:263",
+      "archetype": "review",
+      "started_at": "2026-10-28T11:38:23.977Z",
+      "exec_log_latest_path": "C:\\IA Trainings\\CalcService\\workflow\\instances\\product-definition\\sessions\\product-calcservice\\agent-run\\prd-verification__1793187505892-7mvbosas.log",
+      "exec_log_latest_run_id": "1793187505892-7mvbosas",
+      "exec_log_latest_model": "globant_dgx/GLM-5.3-Flash",
+      "exec_log_latest_started_at": "2026-10-28T11:38:25.892Z",
+      "exec_log_latest_session_resume": {
+        "resumed": false,
+        "cold_reason": "first_run"
+      },
+      "billing_state": "approved",
+      "completed_at": "2026-10-28T11:38:27.800Z",
+      "completed_by_user": true,
+      "outputs": {
+        "prd_verification_verdict": "PASSED",
+        "prd_verification_report_path": "./artifacts/outputs/product-definition/prd/prd-verification/prd_verification_findings.json",
+        "prd_failed_blocker_count": "0"
+      },
+      "artifact_group_id": "5641b055-dd8c-4dbb-95a7-c3fd3656f296",
+      "exec_log_latest_completed_at": "2026-10-28T11:38:27.754Z"
+    },
+    "prd-validation": {
+      "status": "completed",
+      "notes": "",
+      "started_at": "2026-10-28T11:38:27.868Z",
+      "review": {
+        "document_path": "artifacts\\outputs\\product-definition\\prd\\PRD-SPEC-pd-20261027-calc001.md",
+        "review_started_at": "2026-10-28T11:39:54.145Z",
+        "review_id": "005f74a0-3f47-436f-977b-f9f00cde67ef",
+        "active_intervals": [
+          {
+            "opened_at": "2026-10-28T11:39:54.145Z",
+            "closed_at": "2026-10-28T11:42:09.484Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T11:42:14.526Z",
+            "closed_at": "2026-10-28T11:42:42.873Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T11:43:08.132Z",
+            "closed_at": "2026-10-28T11:44:03.620Z",
+            "source": "verdict"
+          }
+        ],
+        "reviewed_at": "2026-10-28T11:44:03.620Z",
+        "validation_action": "Approved",
+        "operator_id": "mario.tejeda@globant.com"
+      },
+      "billing_state": "approved",
+      "completed_at": "2026-10-28T11:44:03.637Z",
+      "completed_by_user": true,
+      "outputs": {},
+      "archetype": "gate"
+    },
+    "backlog-epic-generation": {
+      "status": "completed",
+      "notes": "",
+      "provider_session_latest": {
+        "executor": "coda",
+        "model": "globant_dgx/GLM-5.3-Flash",
+        "requested_model": "globant_dgx/GLM-5.3-Flash",
+        "assigned": true,
+        "usage_total": {
+          "inputTokens": 7599503,
+          "outputTokens": 40307,
+          "cacheReadTokens": 0,
+          "cacheCreationTokens": 0
+        },
+        "session_id": "ae198d7f-2000-4e01-87e3-36b324842635",
+        "run_id": "1793188912323-60zddhzt",
+        "captured_at": "2026-10-28T12:05:24.941Z"
+      },
+      "started_at": "2026-10-28T12:01:51.095Z",
+      "exec_log_latest_path": "C:\\IA Trainings\\CalcService\\workflow\\instances\\product-definition\\sessions\\product-calcservice\\agent-run\\backlog-epic-generation__1793188912323-60zddhzt.log",
+      "exec_log_latest_run_id": "1793188912323-60zddhzt",
+      "exec_log_latest_model": "globant_dgx/GLM-5.3-Flash",
+      "exec_log_latest_started_at": "2026-10-28T12:01:52.323Z",
+      "exec_log_latest_executor": "coda",
+      "open_questions_delivered_at": "2026-10-28T12:01:52.487Z",
+      "outputs": {
+        "read_manifest_path": "./workflow/instances/product-definition/sessions/product-calcservice/read-manifest-backlog-epic-generation.json",
+        "epics_output_path": "./artifacts/outputs/product-definition/epics"
+      },
+      "archetype": "generate",
+      "artifact_group_id": "45f03c01-ad53-4e64-9701-6db43d55b1ee",
+      "exec_failure_message": "Gate 'epics-verification' rejected (verdict 'FAILED').",
+      "retry_feedback_source": {
+        "gate_step_id": "epics-verification",
+        "raw_feedback": "The automated verification gate 'epics-verification' REJECTED this artifact (verdict 'FAILED'). Address the findings below before re-submitting.\nGate outputs (read the referenced report/findings files):\n- epics_verification_verdict: FAILED\n- epics_verification_report_path: C:\\IA Trainings\\CalcService\\artifacts\\outputs\\product-definition\\epics\\epics-verification\\epics_verification_findings.json\n- epics_failed_blocker_count: 1"
+      },
+      "exec_log_latest_session_resume": {
+        "resumed": true,
+        "provider_session_id": "ae198d7f-2000-4e01-87e3-36b324842635"
+      },
+      "completed_at": "2026-10-28T12:05:25.045Z",
+      "completed_by_user": true,
+      "changed_files": [
+        {
+          "path": "artifacts/outputs/product-definition/epics/_extractions/PRD-SPEC-pd-20261027-calc001.md",
+          "change": "added",
+          "after_hash": "201798bc1920cbe4407574abf01e053313f6a44216ab42b4a5e6eb3e976f72ed",
+          "preview": "+ # Extraction: PRD-SPEC-pd-20261027-calc001.md\n+ source: artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md (589 lines)\n+ extracted_at: 2026-10-28T11:52:17Z\n+ purpose: planning-epics Phase B input — every FR, NFR, JTBD, KPI, persona, risk, assumption, dependency, literal, scope item, phasing entry\n  \n+ ## project_info (verbatim)\n+ - client_name: Internal platform organization (client organization not named in source inputs; service built for internal platform teams)\n+ - project_name: Math Operations Microservice (Calc-Service)\n+ - project_description: A lightweight, stateless microservice that provides a centralized, deterministic mathematical computation capability for the platform, externalizing calculation logic from client applications to enable consistency, reuse, and controlled evolution of numerical behavior across the ecosystem.\n+ \n+ ## content_hash\n+ - 25c7814b3af060433c725d5e0d92674538e4af564960493da328ea935e63f93a (transcribe verbatim as prd_source_hash)\n+ \n+ ## FRs (10)\n+ - FR-01 Execute standard arithmetic operations (addition, subtraction, multiplication, division) | must_have | depends: none | PRD:FR-01\n+ - FR-02 Execute advanced operations (exponentiation, roots, trigonometric functions) | should_have | depends: FR-01 | PRD:FR-02\n+ - FR-03 Produce deterministic, high-precision results | must_have | depends: FR-01 | precision policy pending (PI-01) | PRD:FR-03\n+ - FR-04 Expose a calculate operation via `POST /api/v1/math/calculate` | must_have | depends: FR-01 | field names assumption ASM-02 | PRD:FR-04\n+ - FR-05 Return clear, fail-fast errors for invalid input | must_have | depends: FR-01 | PRD:FR-05\n+ - FR-06 Record calculation history as optional, auxiliary local persistence | could_have | depends: FR-01 | embedded DB abstraction ASM-03 | PRD:FR-06\n+ - FR-07 Calculation must succeed even if history persistence fails | must_have | depends: FR-06 | PRD:FR-07\n+ - FR-08 Provide history retrieval of recent calculation records | could_have | depends: FR-06 | endpoint contract pending (PI-02 / OQ-025246e3) | PRD:FR-08\n+ - FR-09 Support extensibility so new operations are added without breaking existing consumers | must_have | depends: FR-01 | PRD:FR-09\n+ - FR-10 Operate as a stateless, independently deployable, horizontally scalable service | must_have | depends: none | stateless mechanism ASM-04 | PRD:FR-10\n+ \n+ ## NFRs (7)\n+ - NFR-01 performance | millisecond-level response for standard operations [PENDING numeric threshold] | pending | PRD:NFR-01\n+ - NFR-02 compliance | 100% identical resultValue on repeated identical requests | complete | PRD:NFR-02\n+ - NFR-03 availability | 100% of valid calculate requests return a result when history persistence unavailable | complete | mirrored as FR-07 (ASM-05) | PRD:NFR-03\n+ - NFR-04 scalability | horizontal scaling by adding instances, no behavior change [PENDING numeric target] | pending | PRD:NFR-04\n+ - NFR-05 usability | observability readiness for future metrics/tracing [PENDING target] | pending | PRD:NFR-05\n+ - NFR-06 security | [PENDING target — no security requirement in inputs] | pending | PRD:NFR-06\n+ - NFR-07 usability | [PENDING target — simple payload baseline] | pending | PRD:NFR-07\n+ \n+ ## KPIs (7)\n+ - KPI-01 at least 1 upstream system integrated | complete | PRD:KPI-01\n+ - KPI-02 100% deterministic unit test coverage of all operations | complete | PRD:KPI-02\n+ - KPI-03 optional history persistence validated (no response impact) | complete | PRD:KPI-03\n+ - KPI-04 API contract documented for internal reuse | complete | PRD:KPI-04\n+ - KPI-05 reduction of duplicated math logic [PENDING numeric target] | pending | PRD:KPI-05\n+ - KPI-06 result consistency across systems [PENDING numeric target] | pending | PRD:KPI-06\n+ - KPI-07 calculation traceability availability [PENDING numeric target] | pending | PRD:KPI-07\n+ \n+ ## JTBDs (4)\n+ - JTBD-01 core_functional: single authoritative math engine, deterministic result for any caller | PRD:JTBD-01\n+ - JTBD-02 related: evolve numerical behavior in one controlled place without breaking consumers | PRD:JTBD-02\n+ - JTBD-03 related: trace/debug calculations via recorded metadata; retrieval never degrades calculation | PRD:JTBD-03\n+ - JTBD-04 related: lightweight deterministic calculations inside automated workflows / AI processes | PRD:JTBD-04\n+ \n+ ## Personas (4)\n+ - P-01 Backend Service Developer (primary) | PRD:P-01\n+ - P-02 Automation Workflow Engineer (secondary) | PRD:P-02\n+ - P-03 AI Agent / AI-Driven Process Operator (secondary) | PRD:P-03\n+ - P-04 Reporting Pipeline Engineer (secondary) | PRD:P-04\n+ \n+ ## Risks (4)\n+ - RSK-01 Hidden logic differences remain between systems after launch (medium/high) | PRD:RSK-01\n+ - RSK-02 Teams bypass the service and keep embedding their own logic (medium/high) | PRD:RSK-02\n+ - RSK-03 History persistence degrades calculation response delivery (low/medium) | PRD:RSK-03\n+ - RSK-04 Precision policy gaps reintroduce floating-point surprises (medium/medium) | PRD:RSK-04\n+ \n+ ## Assumptions (7)\n+ - ASM-01 personas are technically proficient engineering roles | PRD:ASM-01\n+ - ASM-02 brief's conceptual API contract field names are intended contract names | PRD:ASM-02\n+ - ASM-03 history persistence uses lightweight local embedded database abstraction | PRD:ASM-03\n+ - ASM-04 stateless design enables horizontal scaling | PRD:ASM-04\n+ - ASM-05 reliability guarantee stated at both FR and NFR level intentionally | PRD:ASM-05\n+ - ASM-06 synchronous request/response only interaction mode at launch | PRD:ASM-06\n+ - ASM-07 MoSCoW priorities inferred from source phrasing | PRD:ASM-07\n+ \n+ ## Dependencies (2)\n+ - DEP-01 external: at least one upstream system must integrate (owner pending, PI-09) | PRD:DEP-01\n+ - DEP-02 technical: embedded persistence abstraction for optional history | PRD:DEP-02\n+ \n+ ## Literal registry (11)\n+ - LIT-01 route POST /api/v1/math/calculate | LIT-02 operand1 | LIT-03 operand2 | LIT-04 operation | LIT-05 resultValue | LIT-06 operationType | LIT-07 timestamp | LIT-08 enum ADD | LIT-09 example values 10.5/5.0/ADD→15.5 | LIT-10 latency goal millisecond-level | LIT-11 H2-based lightweight persistence strategy\n+ \n+ ## mvp_phasing\n+ - phase_1_mvp (must_have): FR-01, FR-03, FR-04, FR-05, FR-09, FR-10 (assumption ASM-07)\n+ - phase_2 (should_have): FR-02\n+ - phase_3 (could_have): FR-06, FR-08\n+ - deferred (wont_have): batch calculations, expression evaluation, workflow integration with automation agents, event-based history\n+ \n+ ## out_of_scope\n+ - batch calculations; expression evaluation; workflow integration with automation agents; event-based history; multi-instance history consistency; regulatory-grade audit persistence\n+ \n+ ## constraints\n+ - budget/timeline/resource/regulatory: PENDING (PI-10, PI-11)\n+ - organizational: history diagnostic not regulatory; persistence replaceable without API contract change\n+ \n+ ## PRD open questions (pending_inputs PI-01..PI-11) — inherited, cite OQ- ids, never re-list\n+ - PI-01 precision policy (FR-03) — OQ raised by prd-creation\n+ - PI-02 history retrieval contract (FR-08) — OQ-025246e3\n+ - PI-03 latency threshold (NFR-01)\n+ - PI-04 concurrency target (NFR-04)\n+ - PI-05 observability target (NFR-05)\n+ - PI-06 security requirements (NFR-06) — OQ-8a3647b2\n+ - PI-07 usability standard (NFR-07)\n+ - PI-08 numeric KPI targets (KPI-05/06/07) — OQ-c5ed68d9\n+ - PI-09 first integration target (DEP-01, KPI-01) — OQ-87c0d49a\n+ - PI-10 budget/timeline/staffing — OQ-43d9b8b1\n+ - PI-11 regulatory obligations — OQ-7046793c\n+ - assumptions_to_validate: ASM-01..ASM-07 (all active, none blocking)\n+ "
+        },
+        {
+          "path": "artifacts/outputs/product-definition/epics/_progress.json",
+          "change": "added",
+          "after_hash": "ab7294eec9f1e7b66ad67d5e8c13bd52fa22e282a76b036cbbcdf2d22ce5de02",
+          "preview": "+ {\n+   \"skill\": \"planning-epics\",\n+   \"session_id\": \"pd-20261028-calc001\",\n+   \"status\": \"COMPLETED\",\n+   \"started_at\": \"2026-10-28T11:52:00Z\",\n+   \"completed_at\": \"2026-10-28T11:58:38Z\",\n+   \"skeleton_written\": true,\n+   \"sections\": {\n+     \"project_info\": \"complete\",\n+     \"prd_id_ownership\": \"complete\",\n+     \"epics\": \"complete\",\n+     \"themes\": \"complete\",\n+     \"dependencies\": \"complete\",\n+     \"sequencing\": \"complete\",\n+     \"reclassification_log\": \"complete\",\n+     \"persona_coverage\": \"complete\",\n+     \"goal_coverage\": \"complete\",\n+     \"open_questions\": \"complete\"\n+   }\n+ }\n  "
+        },
+        {
+          "path": "artifacts/outputs/product-definition/epics/EPICS-AUDIT-pd-20261028-calc001.md",
+          "change": "added",
+          "after_hash": "5d733fd5381015d897f55e632b8a983958d3854b37d9479a3ef0ae86545b3b40",
+          "preview": "+ # EPICS-AUDIT-pd-20261028-calc001\n+ version: 1.0.1\n+ session: pd-20261028-calc001\n+ mode: REPAIR\n+ date: 2026-10-28\n+ language: en\n+ session_id: pd-20261028-calc001\n+ status: complete\n  \n+ ---\n+ \n+ ## Sources Referenced (SOURCE_LOG)\n+ \n+ | raw_source | extraction | spec_items |\n+ |------------|------------|------------|\n+ | artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md (589 lines) | artifacts/outputs/product-definition/epics/_extractions/PRD-SPEC-pd-20261027-calc001.md | all sections |\n+ | artifacts/inputs/project-brief.md (144 lines) | read inline (MVP scope filter, Step 5) | MVP bullet matching for all 8 epics |\n+ \n+ ## Structured Contract Validation\n+ \n+ - contract_format: structured — present in spec front-matter\n+ - prd_source_hash: 25c7814b3af060433c725d5e0d92674538e4af564960493da328ea935e63f93a — transcribed verbatim from the PRD's `content_hash` (declared upstream; not recomputed)\n+ - enriched open_questions: pending_inputs / alignment_gaps / assumptions_to_validate tables present with affected_ids, blocking, fallback_behavior\n+ - stable ID anchors: all source references use `PRD:<ID>` section anchors, no line numbers\n+ \n+ ## PRD Ownership Counts\n+ \n+ - FR: 10 of 10 (all owned)\n+ - NFR: 7 of 7 (all cross_cutting, embedded as DoD constraints)\n+ - KPI: 7 of 7 (3 owned, 4 cross_cutting)\n+ - JTBD: 4 of 4 (all cross_cutting)\n+ - RSK: 4 of 4 (all cross_cutting)\n+ - ASM: 7 of 7 (2 owned, 5 cross_cutting)\n+ - DEP: 2 of 2 (1 owned, 1 cross_cutting)\n+ - P (personas): 4 of 4 (all cross_cutting)\n+ - LIT (literal_registry): 11 of 11 (all owned)\n+ - Total: 56 rows, 0 duplicates, 0 missing\n+ \n+ ## FR Coverage\n+ \n+ FR coverage: 10 of 10 FRs mapped. (STOP-GATE threshold 80% — passed at 100%.)\n+ \n+ | FR | epic_ids |\n+ |----|----------|\n+ | FR-01 | EPIC-01 |\n+ | FR-02 | EPIC-04 |\n+ | FR-03 | EPIC-01 |\n+ | FR-04 | EPIC-02 |\n+ | FR-05 | EPIC-02 |\n+ | FR-06 | EPIC-05 |\n+ | FR-07 | EPIC-05 |\n+ | FR-08 | EPIC-06 |\n+ | FR-09 | EPIC-03 |\n+ | FR-10 | EPIC-07 |\n+ \n+ ## NFR Propagation Sweep (mechanical, table-driven per KFM-003)\n+ \n+ | NFR | cross_cutting in PRD | epics whose scope touches the NFR subject | touched | reason |\n+ |-----|----------------------|-------------------------------------------|---------|--------|\n+ | NFR-01 (performance) | yes | EPIC-01, EPIC-02 | yes | latency applies to the calculation core and its API exposure; not touched by EPIC-03/04/05/06/07/08 (no request path of their own beyond the API) |\n+ | NFR-02 (determinism) | yes | EPIC-01, EPIC-02, EPIC-03, EPIC-04 | yes | every computation-bearing epic carries the determinism DoD; EPIC-05/06/08 perform no computation |\n+ | NFR-03 (availability) | yes | EPIC-05 | yes | availability guarantee is meaningful only where persistence exists; verified against the same test as FR-07 per ASM-05 (OQ-abad2154) |\n+ | NFR-04 (scalability) | yes | EPIC-07 | yes | horizontal scaling is the service shell's DoD; other epics inherit the shell's deployment model |\n+ | NFR-05 (observability) | yes | EPIC-07 | yes | observability readiness is a shell-level concern; structured logging baseline |\n+ | NFR-06 (security) | yes | EPIC-02 | yes | security applies to the API surface; target pending (OQ-8a3647b2) |\n+ | NFR-07 (usability) | yes | EPIC-02, EPIC-08 | yes | usability applies to the API contract and its documentation |\n+ \n+ `prd_id_ownership` was updated in the same pass (KFM-003 rule 3).\n+ \n+ ## Reclassification Log (gate decisions)\n+ \n+ All 10 gate decisions are recorded in the spec's `## reclassification_log` section: 7 NFR-overlap DoD embeddings (Gate 2), 2 enabler reclassifications (Gate 3), 1 DoD-constraint embedding of the precision policy (Gate 1). No candidate was discarded.\n+ \n+ ## MVP Scope Filter (Step 5)\n+ \n+ Every canonical epic traces to (a) at least one PRD FR/NFR/KPI and (b) at least one project-brief MVP bullet:\n+ \n+ | epic | FR/NFR trace | brief anchor |\n+ |------|--------------|--------------|\n+ | EPIC-01 | FR-01, FR-03 | §2 Standard Operations; §2 Precision Strategy |\n+ | EPIC-02 | FR-04, FR-05 | §4 API Contract (Calculate Operation) |\n+ | EPIC-03 | FR-09 | §1 (controlled evolution of numerical behavior); discovery §01:30 |\n+ | EPIC-04 | FR-02 | §2 Advanced Operations |\n+ | EPIC-05 | FR-06, FR-07 | §2 History Tracking (Optional); §5 Reliability |\n+ | EPIC-06 | FR-08 | §4 History Retrieval (Optional) |\n+ | EPIC-07 | FR-10 | §3 Architectural Positioning; §5 Scalability |\n+ | EPIC-08 | KPI-04 | §7 Success Criteria (API contract documented for internal reuse) |\n+ \n+ deferred_candidates: none — no candidate epic failed either trace.\n+ \n+ ## Decisions Made (CHANGE_LOG)\n+ \n+ - EPIC-07 (stateless deployable service shell) typed as enabler: infrastructure foundation carrying FR-10; traces to KPI-01. Gate 3 decision.\n+ - EPIC-08 (API contract documentation) typed as enabler: documentation deliverable tracing to KPI-04 only, no FR. Gate 3 decision; not unaligned because the KPI trace satisfies enabler alignment.\n+ - FR-03's precision policy design note embedded as a DoD constraint of EPIC-01 rather than a standalone epic (Gate 1: not independently demoable); concrete policy remains pending upstream (PI-01).\n+ - FR-07 and NFR-03 both retained and verified against the same test in EPIC-05, per ASM-05 (OQ-abad2154) — no merge performed at the epic layer.\n+ - FR-08 kept as a separate epic (EPIC-06) with the endpoint contract explicitly out of scope per OQ-025246e3; excluded from the MVP phase per the PRD's own fallback.\n+ - Dependency edges derived from the PRD's inter_feature_dependencies; no cycles found, no ENABLER extraction needed.\n+ - Priority tiers: 6 must_have, 1 should_have, 1 could_have — derived from PRD MoSCoW (ASM-07, OQ-b450c1ca) plus dependency position.\n+ \n+ ## Self-Consistency Sweep (KFM-002, 4-point)\n+ \n+ 1. \"none/PASS\" claims validated against artifact content: pending_inputs and alignment_gaps tables are empty and the empty state is justified in prose (personas/JTBDs/KPIs all covered — verified against persona_coverage and goal_coverage tables; no epic unaligned — verified against reclassification_log). Claim holds.\n+ 2. OQ-* decisions cited in one section propagated to all sections referencing the subject: OQ-abad2154 cited in prd_id_ownership (NFR-03, ASM-05 rows), EPIC-05 nfr_dod/asm_refs, and reclassification_log; OQ-025246e3 cited in EPIC-06 scope and the open_questions prose; OQ-8a3647b2/OQ-4d202bf8 cited in EPIC-02 nfr_dod and ownership rows; OQ-87c0d49a cited in DEP-01 row and KPI-01 ownership; OQ-c5ed68d9 cited in KPI-05/06/07 ownership rows. Consistent.\n+ 3. Audit narrative reconciled against the emitted spec: counts in this audit (8 epics, 2 enablers, 4 themes, 10 reclassifications, 1 assumption) match the spec's open_questions summary. Verified.\n+ 4. No open question left whose subject the artifact has already committed on: the single assumption raised (ASM-E01, theme grouping) is not committed on anywhere in the spec. Verified.\n+ \n+ ## Sequencing Validation Evidence\n+ \n+ - edges_checked: 6 of 6 epic_to_epic edges; per-edge ordering_proof table emitted in the spec (all ok: yes)\n+ - blocked_before_blocker_violations: 0\n+ - The \"EPIC ID ORDER IS NOT BUILD ORDER\" note is carried at the head of `## epics` (AP-001/KFM-001 mitigation)\n+ \n+ ## Summary Counts\n+ \n+ - themes: 4\n+ - epics: 8 (6 feature, 2 enabler, 0 spike)\n+ - reclassified: 10\n+ - deferred_candidates: 0\n+ - open_questions raised by this run: 1 assumption (ASM-E01)\n+ - FR coverage: 10 of 10 FRs mapped\n+ - status: complete\n+ \n+ ## Files Written\n+ \n+ - artifacts/outputs/product-definition/epics/EPICS-SPEC-pd-20261028-calc001.md (the single backlog spec)\n+ - artifacts/outputs/product-definition/epics/EPICS-AUDIT-pd-20261028-calc001.md (this audit)\n+ - artifacts/outputs/product-definition/epics/_progress.json (tracker)\n+ - artifacts/outputs/product-definition/epics/_extractions/PRD-SPEC-pd-20261027-calc001.md (extraction, §10.2)\n+ \n+ ## Repair History\n+ \n+ ### 1.0.1 — 2026-10-28T12:05:00Z — REPAIR (epics-verification gate C10)\n+ - **What changed:** Fixed verification blocker C10 (bare IDs in refs/traceability fields). (a) Annotated the bare `KPI-04` reference in the T-04 theme feature line as `KPI-04 (API contract documentation for internal reuse)`. (b) Renamed theme T-03 from \"calculation history and traceability\" to \"calculation history and record lookup\" — the word \"traceability\" in the heading placed the bare `T-03` heading ID in a refs/traceability context for the checker — and updated the two matching `- theme: T-03 (...)` annotations in EPIC-05 and EPIC-06 for name consistency.\n+ - **What was preserved:** All 8 epics, 4 themes, ownership table (56 rows), dependencies (6 edges), sequencing, reclassification log, persona/goal coverage, and open questions are unchanged in substance; only the two flagged lines and the T-03 name annotations were touched.\n+ - **Verification:** All other gate checks (C01–C09, C11–C17) were PASS in the findings report and were not modified.\n+ "
+        },
+        {
+          "path": "artifacts/outputs/product-definition/epics/EPICS-SPEC-pd-20261028-calc001.md",
+          "change": "added",
+          "after_hash": "89805430a4ff70ab20319d7499c41474150f7ebce2bb6ffcc6899bcb68c002cf",
+          "preview": "+ # Math Operations Microservice (Calc-Service) — Epics Backlog Spec\n+ version: 1.0.1\n+ session: pd-20261028-calc001\n+ mode: BUILD\n+ date: 2026-10-28\n+ language: en\n+ prd_source: artifacts/outputs/product-definition/prd/PRD-SPEC-pd-20261027-calc001.md\n+ contract_format: structured\n+ prd_source_hash: 25c7814b3af060433c725d5e0d92674538e4af564960493da328ea935e63f93a\n+ status: draft\n  \n+ ---\n+ \n+ ## project_info\n+ client_name: Internal platform organization (client organization not named in source inputs; service built for internal platform teams)\n+ project_name: Math Operations Microservice (Calc-Service)\n+ project_description: A lightweight, stateless microservice that provides a centralized, deterministic mathematical computation capability for the platform, externalizing calculation logic from client applications to enable consistency, reuse, and controlled evolution of numerical behavior across the ecosystem.\n+ \n+ ---\n+ \n+ ## prd_id_ownership\n+ \n+ Complete projection of PRD IDs into the epic layer. Every PRD ID appears exactly once as `owned`, `cross_cutting`, or `deferred`.\n+ \n+ | prd_id | prd_name | type | disposition | epic_ids | phase | reason | source_ref |\n+ |--------|----------|------|-------------|----------|-------|--------|------------|\n+ | FR-01 | Execute standard arithmetic operations (addition, subtraction, multiplication, division) | FR | owned | EPIC-01 | phase_1_mvp | primary deliverable of EPIC-01 (standard arithmetic calculation core) | PRD:FR-01 |\n+ | FR-02 | Execute advanced operations (exponentiation, roots, trigonometric functions) | FR | owned | EPIC-04 | phase_2 | primary deliverable of EPIC-04 (advanced operations extension) | PRD:FR-02 |\n+ | FR-03 | Produce deterministic, high-precision results | FR | owned | EPIC-01 | phase_1_mvp | determinism guarantee embedded in EPIC-01 (standard arithmetic calculation core) | PRD:FR-03 |\n+ | FR-04 | Expose a calculate operation via `POST /api/v1/math/calculate` | FR | owned | EPIC-02 | phase_1_mvp | primary deliverable of EPIC-02 (calculate API contract) | PRD:FR-04 |\n+ | FR-05 | Return clear, fail-fast errors for invalid input | FR | owned | EPIC-02 | phase_1_mvp | error handling embedded in EPIC-02 (calculate API contract) | PRD:FR-05 |\n+ | FR-06 | Record calculation history as optional, auxiliary local persistence | FR | owned | EPIC-05 | phase_3 | primary deliverable of EPIC-05 (optional history persistence) | PRD:FR-06 |\n+ | FR-07 | Calculation must succeed even if history persistence fails | FR | owned | EPIC-05 | phase_3 | reliability guarantee embedded in EPIC-05 (optional history persistence) | PRD:FR-07 |\n+ | FR-08 | Provide history retrieval of recent calculation records | FR | owned | EPIC-06 | phase_3 | primary deliverable of EPIC-06 (history retrieval) | PRD:FR-08 |\n+ | FR-09 | Support extensibility so new operations are added without breaking existing consumers | FR | owned | EPIC-03 | phase_1_mvp | primary deliverable of EPIC-03 (extensible operation registry) | PRD:FR-09 |\n+ | FR-10 | Operate as a stateless, independently deployable, horizontally scalable service | FR | owned | EPIC-07 | phase_1_mvp | primary deliverable of EPIC-07 (stateless deployable service shell) | PRD:FR-10 |\n+ | NFR-01 | Standard operations respond at millisecond-level latency | NFR | cross_cutting | EPIC-01, EPIC-02 | all | latency DoD constraint on the calculation core (EPIC-01) and its API exposure (EPIC-02) | PRD:NFR-01 |\n+ | NFR-02 | Same input always produces the same result (determinism) | NFR | cross_cutting | EPIC-01, EPIC-02 | all | determinism DoD constraint on the calculation core (EPIC-01) and its API exposure (EPIC-02) | PRD:NFR-02 |\n+ | NFR-03 | Calculation succeeds even when history persistence fails | NFR | cross_cutting | EPIC-05 | phase_3 | availability DoD constraint on EPIC-05 (optional history persistence); behavioral mirror of FR-07 per ASM-05 (OQ-abad2154) | PRD:NFR-03 |\n+ | NFR-04 | Stateless design supports horizontal scaling | NFR | cross_cutting | EPIC-07 | all | scalability DoD constraint on EPIC-07 (stateless deployable service shell) | PRD:NFR-04 |\n+ | NFR-05 | Observability readiness for future metrics and tracing integration | NFR | cross_cutting | EPIC-07 | all | observability-readiness DoD constraint on EPIC-07 (stateless deployable service shell) | PRD:NFR-05 |\n+ | NFR-06 | Security and access control for the calculation API | NFR | cross_cutting | EPIC-02 | all | security DoD constraint on EPIC-02 (calculate API contract); target pending (OQ-8a3647b2) | PRD:NFR-06 |\n+ | NFR-07 | API usability for internal consumers | NFR | cross_cutting | EPIC-02 | all | usability DoD constraint on EPIC-02 (calculate API contract); simple payload baseline per OQ-4d202bf8 | PRD:NFR-07 |\n+ | KPI-01 | Upstream system integration adoption | KPI | cross_cutting | EPIC-02, EPIC-07 | all | first upstream integration (DEP-01, OQ-87c0d49a) is demonstrated through EPIC-02 (calculate API contract) running on EPIC-07 (stateless deployable service shell) | PRD:KPI-01 |\n+ | KPI-02 | Deterministic test coverage of all operations | KPI | cross_cutting | EPIC-01, EPIC-03, EPIC-04 | all | deterministic unit test coverage is the DoD of EPIC-01 (standard arithmetic calculation core), EPIC-03 (extensible operation registry), EPIC-04 (advanced operations extension) | PRD:KPI-02 |\n+ | KPI-03 | History persistence validation | KPI | owned | EPIC-05 | phase_3 | validation run confirming persistence works without impacting response delivery is the acceptance evidence of EPIC-05 (optional history persistence) | PRD:KPI-03 |\n+ | KPI-04 | API contract documentation for internal reuse | KPI | owned | EPIC-08 | phase_1_mvp | published API contract documentation is the deliverable of EPIC-08 (API contract documentation) | PRD:KPI-04 |\n+ | KPI-05 | Reduction of duplicated math logic across teams | KPI | cross_cutting | EPIC-01, EPIC-02, EPIC-08 | all | centralization of math logic (EPIC-01) behind a documented simple API (EPIC-02, EPIC-08) is the mechanism for reducing duplication; numeric target pending (OQ-c5ed68d9) | PRD:KPI-05 |\n+ | KPI-06 | Result consistency across systems | KPI | cross_cutting | EPIC-01, EPIC-02 | all | deterministic identical results from the central engine (EPIC-01) delivered through the API (EPIC-02) produce cross-system consistency; numeric target pending (OQ-c5ed68d9) | PRD:KPI-06 |\n+ | KPI-07 | Calculation traceability availability | KPI | owned | EPIC-05, EPIC-06 | phase_3 | traceability delivered by history recording (EPIC-05) and retrieval (EPIC-06); numeric target pending (OQ-c5ed68d9) | PRD:KPI-07 |\n+ | JTBD-01 | core_functional | JTBD | cross_cutting | EPIC-01, EPIC-02 | all | single authoritative math engine (EPIC-01) consumed through the calculate API (EPIC-02) | PRD:JTBD-01 |\n+ | JTBD-02 | related | JTBD | cross_cutting | EPIC-03 | phase_1_mvp | controlled evolution of numerical behavior without breaking consumers is delivered by EPIC-03 (extensible operation registry) | PRD:JTBD-02 |\n+ | JTBD-03 | related | JTBD | cross_cutting | EPIC-05, EPIC-06 | phase_3 | trace and debug via recorded metadata delivered by EPIC-05 (optional history persistence) and EPIC-06 (history retrieval) | PRD:JTBD-03 |\n+ | JTBD-04 | related | JTBD | cross_cutting | EPIC-02, EPIC-07 | all | lightweight deterministic calculations inside automated workflows served by the calculate API (EPIC-02) on the stateless service (EPIC-07) | PRD:JTBD-04 |\n+ | RSK-01 | Hidden logic differences remain between systems after the service launches | risk | cross_cutting | EPIC-01, EPIC-02 | all | mitigated by deterministic central engine (EPIC-01) and consistent API results (EPIC-02) | PRD:RSK-01 |\n+ | RSK-02 | Teams bypass the service and keep embedding their own calculation logic | risk | cross_cutting | EPIC-02, EPIC-08 | all | mitigated by simple payload design (EPIC-02) and published contract documentation (EPIC-08) | PRD:RSK-02 |\n+ | RSK-03 | History persistence degrades calculation response delivery | risk | cross_cutting | EPIC-05 | phase_3 | mitigated by the persistence-never-blocks-calculation guarantee embedded in EPIC-05 (optional history persistence) | PRD:RSK-03 |\n+ | RSK-04 | Precision policy gaps reintroduce floating-point surprises between systems | risk | cross_cutting | EPIC-01 | all | mitigated by the single high-precision computation strategy embedded in EPIC-01 (standard arithmetic calculation core); policy pending (PI-01) | PRD:RSK-04 |\n+ | ASM-01 | Consumer personas are technically proficient engineering roles | assumption | cross_cutting | EPIC-01, EPIC-02, EPIC-04, EPIC-05, EPIC-06, EPIC-08 | all | persona proficiency underpins API usability prioritization across consumer-facing epics (OQ-74ae3574) | PRD:ASM-01 |\n+ | ASM-02 | The brief's conceptual API contract field names are the intended contract names | assumption | owned | EPIC-02 | phase_1_mvp | field names used verbatim in EPIC-02 (calculate API contract) acceptance criteria (OQ-8501c5fa) | PRD:ASM-02 |\n+ | ASM-03 | History persistence uses a lightweight local embedded database abstraction | assumption | owned | EPIC-05 | phase_3 | persistence abstraction design basis of EPIC-05 (optional history persistence) (OQ-4606eb39) | PRD:ASM-03 |\n+ | ASM-04 | Stateless design is the mechanism that enables horizontal scaling | assumption | cross_cutting | EPIC-07 | all | statelessness is the design basis of EPIC-07 (stateless deployable service shell) (OQ-62a2df8e) | PRD:ASM-04 |\n+ | ASM-05 | The reliability guarantee is stated at both FR and NFR level intentionally | assumption | cross_cutting | EPIC-05 | phase_3 | FR-07 and NFR-03 both verified against the same test in EPIC-05 (optional history persistence) (OQ-abad2154) | PRD:ASM-05 |\n+ | ASM-06 | Synchronous request/response is the only interaction mode required at launch | assumption | cross_cutting | EPIC-02 | all | only synchronous request/response modeled in EPIC-02 (calculate API contract) (OQ-e44e5e82) | PRD:ASM-06 |\n+ | ASM-07 | MoSCoW priorities inferred from source phrasing | assumption | cross_cutting | EPIC-01, EPIC-02, EPIC-03, EPIC-04, EPIC-05, EPIC-06, EPIC-07, EPIC-08 | all | priority tiers and phase mapping of all epics follow the inferred MoSCoW assignment (OQ-b450c1ca) | PRD:ASM-07 |\n+ | DEP-01 | Upstream consumer systems | dependency | cross_cutting | EPIC-02, EPIC-07 | all | at least one upstream system must integrate via EPIC-02 (calculate API contract) on EPIC-07 (stateless deployable service shell); first target pending (OQ-87c0d49a) | PRD:DEP-01 |\n+ | DEP-02 | Embedded persistence abstraction for optional history | dependency | owned | EPIC-05 | phase_3 | embedded persistence abstraction is the technical basis of EPIC-05 (optional history persistence) | PRD:DEP-02 |\n+ | P-01 | Backend Service Developer | persona | cross_cutting | EPIC-01, EPIC-02, EPIC-03, EPIC-08 | all | primary consumer of the calculation core, API, extensibility, and documentation | PRD:P-01 |\n+ | P-02 | Automation Workflow Engineer | persona | cross_cutting | EPIC-02, EPIC-07 | all | synchronous calculations inside automated workflows via the calculate API on the stateless service | PRD:P-02 |\n+ | P-03 | AI Agent / AI-Driven Process Operator | persona | cross_cutting | EPIC-02, EPIC-07 | all | deterministic calculations for AI-driven processes via the calculate API on the stateless service | PRD:P-03 |\n+ | P-04 | Reporting Pipeline Engineer | persona | cross_cutting | EPIC-01, EPIC-02 | all | consistent numerical results across reporting outputs via the deterministic engine and API | PRD:P-04 |\n+ | LIT-01 | calculate endpoint route | literal | owned | EPIC-02 | phase_1_mvp | exact route used by EPIC-02 (calculate API contract) acceptance criteria | PRD:LIT-01 |\n+ | LIT-02 | request field: operand1 | literal | owned | EPIC-02 | phase_1_mvp | exact request field name in EPIC-02 (calculate API contract) | PRD:LIT-02 |\n+ | LIT-03 | request field: operand2 | literal | owned | EPIC-02 | phase_1_mvp | exact request field used by EPIC-02 (calculate API contract) | PRD:LIT-03 |\n+ | LIT-04 | request field: operation | literal | owned | EPIC-02 | phase_1_mvp | exact request field used by EPIC-02 (calculate API contract) | PRD:LIT-04 |\n+ | LIT-05 | response field: resultValue | literal | owned | EPIC-01, EPIC-02 | phase_1_mvp | exact response field produced by EPIC-01 (standard arithmetic calculation core) and exposed by EPIC-02 (calculate API contract) | PRD:LIT-05 |\n+ | LIT-06 | response field: operationType | literal | owned | EPIC-01, EPIC-02 | phase_1_mvp | exact response field produced by EPIC-01 (standard arithmetic calculation core) and exposed by EPIC-02 (calculate API contract) | PRD:LIT-06 |\n+ | LIT-07 | response field: timestamp | literal | owned | EPIC-02 | phase_1_mvp | exact response field exposed by EPIC-02 (calculate API contract) | PRD:LIT-07 |\n+ | LIT-08 | operation enum: ADD | literal | owned | EPIC-01, EPIC-02 | phase_1_mvp | operation enum value exercised by EPIC-01 (standard arithmetic calculation core) acceptance criteria | PRD:LIT-08 |\n+ | LIT-09 | example request values | literal | owned | EPIC-02 | phase_1_mvp | example request/response values used in EPIC-02 (calculate API contract) acceptance criteria | PRD:LIT-09 |\n+ | LIT-10 | latency goal | literal | owned | EPIC-01, EPIC-02 | phase_1_mvp | millisecond-level latency goal carried as DoD constraint on EPIC-01 (standard arithmetic calculation core) and EPIC-02 (calculate API contract) | PRD:LIT-10 |\n+ | LIT-11 | persistence strategy | literal | owned | EPIC-05 | phase_3 | H2-based lightweight persistence strategy referenced by EPIC-05 (optional history persistence) | PRD:LIT-11 |\n+ \n+ ---\n+ \n+ ---\n+ \n+ ## themes\n+ \n+ ### T-01: deterministic calculation engine\n+ - features:\n+   - standard arithmetic operations | fr_refs: FR-01 (Execute standard arithmetic operations (addition, subtraction, multiplication, division)), FR-03 (Produce deterministic, high-precision results) | priority: must_have\n+   - calculate API and error handling | fr_refs: FR-04 (Expose a calculate operation via `POST /api/v1/math/calculate`), FR-05 (Return clear, fail-fast errors for invalid input) | priority: must_have\n+   - operation extensibility | fr_refs: FR-09 (Support extensibility so new operations are added without breaking existing consumers) | priority: must_have\n+ - status: complete\n+ \n+ ### T-02: advanced computation capabilities\n+ - features:\n+   - advanced operations | fr_refs: FR-02 (Execute advanced operations (exponentiation, roots, trigonometric functions)) | priority: should_have\n+ - status: complete\n+ \n+ ### T-03: calculation history and record lookup\n+ - features:\n+   - optional history persistence | fr_refs: FR-06 (Record calculation history as optional, auxiliary local persistence), FR-07 (Calculation must succeed even if history persistence fails) | priority: could_have\n+   - history retrieval | fr_refs: FR-08 (Provide history retrieval of recent calculation records) | priority: could_have\n+ - status: complete\n+ \n+ ### T-04: platform service foundation\n+ - features:\n+   - stateless deployable service | fr_refs: FR-10 (Operate as a stateless, independently deployable, horizontally scalable service) | priority: must_have\n+   - API contract documentation | fr_refs: — | priority: must_have | [ASM: inferred grouping — documentation enabler traces to KPI-04 (API contract documentation for internal reuse), no FR]\n+ - status: complete\n+ \n+ ---\n+ \n+ ---\n+ \n+ ## epics\n+ \n+ > **EPIC ID ORDER IS NOT BUILD ORDER.** Ids reflect authoring sequence; foundational\n+ > enablers are routinely numbered last. The authoritative execution order for every\n+ > downstream consumer (sprint planning, decomposition, implementation) is\n+ > `## sequencing → topological_order`, with its edge table in `## dependencies` —\n+ > both are at the END of this file. Do not derive a sequence from the epic list\n+ > below.\n+ \n+ ### EPIC-01: Standard arithmetic calculation core\n+ - type: feature\n+ - theme: T-01 (deterministic calculation engine)\n+ - personas: P-01 (Backend Service Developer), P-04 (Reporting Pipeline Engineer)\n+ - priority_tier: must_have\n+ - complexity: M\n+ - traceability:\n+   - fr: FR-01 (Execute standard arithmetic operations (addition, subtraction, multiplication, division)), FR-03 (Produce deterministic, high-precision results)\n+   - jtbd: JTBD-01 (core_functional)\n+   - kpi: KPI-02 (Deterministic test coverage of all operations), KPI-06 (Result consistency across systems)\n+ - nfr_dod:\n+   - NFR-01: millisecond-level response time for standard operations (interim baseline: sub-second, < 1000 ms, per OQ pending on NFR-01)\n+   - NFR-02: 100% of repeated identical requests return the identical resultValue\n+ - rsk_refs: RSK-01 (Hidden logic differences remain between systems after the service launches), RSK-04 (Precision policy gaps reintroduce floating-point surprises between systems)\n+ - asm_refs: ASM-07 (MoSCoW priorities inferred from source phrasing)\n+ - scope:\n+   - in: deterministic computation engine implementing addition, subtraction, multiplication, and division with a single high-precision internal computation strategy applied service-wide; deterministic unit test coverage for every standard operation\n+   - out: advanced operations (EPIC-04 (advanced operations extension)), API exposure (EPIC-02 (calculate API contract)), history recording (EPIC-05 (optional history persistence))\n+ - status: complete\n+ \n+ ### EPIC-02: Calculate API contract\n+ - type: feature\n+ - theme: T-01 (deterministic calculation engine)\n+ - personas: P-01 (Backend Service Developer), P-02 (Automation Workflow Engineer), P-03 (AI Agent / AI-Driven Process Operator), P-04 (Reporting Pipeline Engineer)\n+ - priority_tier: must_have\n+ - complexity: M\n+ - traceability:\n+   - fr: FR-04 (Expose a calculate operation via `POST /api/v1/math/calculate`), FR-05 (Return clear, fail-fast errors for invalid input)\n+   - jtbd: JTBD-01 (core_functional), JTBD-04 (related)\n+   - kpi: KPI-01 (Upstream system integration adoption), KPI-05 (Reduction of duplicated math logic across teams)\n+ - nfr_dod:\n+   - NFR-01: millisecond-level response time for standard operations (interim baseline: sub-second, < 1000 ms)\n+   - NFR-02: 100% of repeated identical requests return the identical resultValue\n+   - NFR-06: security and access control target pending (OQ-8a3647b2); interim baseline: internal platform component, no additional authentication assumed\n+   - NFR-07: simple payload design (operands + operation in, result out) as the usability baseline per OQ-4d202bf8\n+ - rsk_refs: RSK-01 (Hidden logic differences remain between systems after the service launches), RSK-02 (Teams bypass the service and keep embedding their own calculation logic)\n+ - asm_refs: ASM-02 (The brief's conceptual API contract field names are the intended contract names), ASM-06 (Synchronous request/response is the only interaction mode required at launch)\n+ - scope:\n+   - in: synchronous `POST /api/v1/math/calculate` endpoint accepting operand1, operand2, operation and returning resultValue, operationType, timestamp; fail-fast validation errors for division by zero, unsupported operation, and missing or non-numeric operands\n+   - out: asynchronous or batch interaction modes (excluded per ASM-06 (Synchronous request/response is the only interaction mode required at launch)); history retrieval endpoints\n+ - status: complete\n+ \n+ ### EPIC-03: Extensible operation registry\n+ - type: feature\n+ - theme: T-01 (deterministic calculation engine)\n+ - personas: P-01 (Backend Service Developer)\n+ - priority_tier: must_have\n+ - complexity: M\n+ - traceability:\n+   - fr: FR-09 (Support extensibility so new operations are added without breaking existing consumers)\n+   - jtbd: JTBD-02 (related)\n+   - kpi: KPI-02 (Deterministic test coverage of all operations)\n+ - nfr_dod:\n+   - NFR-02: 100% of repeated identical requests return the identical resultValue (new operations inherit the determinism guarantee)\n+ - rsk_refs: —\n+ - asm_refs: ASM-07 (MoSCoW priorities inferred from source phrasing)\n+ - scope:\n+   - in: operation registry mechanism through which new operations are registered and dispatched, demonstrating that adding an operation requires no change to the calculate contract and no break to existing consumers\n+   - out: any specific advanced operation (delivered by EPIC-04 (advanced operations extension))\n+ - status: complete\n+ \n+ ### EPIC-04: Advanced operations extension\n+ - type: feature\n+ - theme: T-02 (advanced computation capabilities)\n+ - personas: P-01 (Backend Service Developer), P-04 (Reporting Pipeline Engineer)\n+ - priority_tier: should_have\n+ - complexity: M\n+ - traceability:\n+   - fr: FR-02 (Execute advanced operations (exponentiation, roots, trigonometric functions))\n+   - jtbd: JTBD-01 (core_functional)\n+   - kpi: KPI-02 (Deterministic test coverage of all operations)\n+ - nfr_dod:\n+   - NFR-02: 100% of repeated identical requests return the identical resultValue (extended to advanced operations)\n+ - rsk_refs: —\n+ - asm_refs: ASM-07 (MoSCoW priorities inferred from source phrasing)\n+ - scope:\n+   - in: exponentiation, root, and trigonometric operations added through the operation registry (EPIC-03 (extensible operation registry)) with deterministic unit test coverage; clear error for a requested advanced operation not yet supported\n+   - out: expression evaluation (out of scope in the PRD)\n+ - status: complete\n+ \n+ ### EPIC-05: Optional history persistence\n+ - type: feature\n+ - theme: T-03 (calculation history and record lookup)\n+ - personas: P-01 (Backend Service Developer)\n+ - priority_tier: could_have\n+ - complexity: M\n+ - traceability:\n+   - fr: FR-06 (Record calculation history as optional, auxiliary local persistence), FR-07 (Calculation must succeed even if history persistence fails)\n+   - jtbd: JTBD-03 (related)\n+   - kpi: KPI-03 (History persistence validation), KPI-07 (Calculation traceability availability)\n+ - nfr_dod:\n+   - NFR-03: 100% of valid calculate requests return a result when history persistence is unavailable (behavioral mirror of FR-07, verified against the same test per ASM-05 (OQ-abad2154))\n+ - rsk_refs: RSK-03 (History persistence degrades calculation response delivery)\n+ - asm_refs: ASM-03 (History persistence uses a lightweight local embedded database abstraction), ASM-05 (The reliability guarantee is stated at both FR and NFR level intentionally)\n+ - scope:\n+   - in: optional, toggleable recording of calculation metadata behind a replaceable embedded database abstraction (LIT-11 (persistence strategy): H2-based lightweight persistence strategy); history write must never delay or block the calculation response; calculation succeeds normally when tracking is disabled or persistence fails\n+   - out: multi-instance history consistency (out of scope in the PRD); regulatory-grade audit persistence (out of scope in the PRD); event-based history (wont_have in the PRD)\n+ - status: complete\n+ \n+ ### EPIC-06: History retrieval\n+ - type: feature\n+ - theme: T-03 (calculation history and record lookup)\n+ - personas: P-01 (Backend Service Developer)\n+ - priority_tier: could_have\n+ - complexity: S\n+ - traceability:\n+   - fr: FR-08 (Provide history retrieval of recent calculation records)\n+   - jtbd: JTBD-03 (related)\n+   - kpi: KPI-07 (Calculation traceability availability)\n+ - nfr_dod: —\n+ - rsk_refs: —\n+ - asm_refs: ASM-03 (History persistence uses a lightweight local embedded database abstraction)\n+ - scope:\n+   - in: retrieval of recent calculation records for diagnostics and auditing, reading from the history store delivered by EPIC-05 (optional history persistence)\n+   - out: a committed endpoint path and response shape — FR-08 is emitted with status pending and no endpoint contract; history retrieval is excluded from the MVP phase per OQ-025246e3\n+ - status: complete\n+ \n+ ### EPIC-07: Stateless deployable service shell\n+ - type: enabler\n+ - theme: T-04 (platform service foundation)\n+ - personas: P-02 (Automation Workflow Engineer), P-03 (AI Agent / AI-Driven Process Operator)\n+ - priority_tier: must_have\n+ - complexity: M\n+ - traceability:\n+   - fr: FR-10 (Operate as a stateless, independently deployable, horizontally scalable service)\n+   - jtbd: JTBD-04 (related)\n+   - kpi: KPI-01 (Upstream system integration adoption)\n+ - nfr_dod:\n+   - NFR-04: service capacity scales horizontally by adding instances with no change to calculation behavior (no numeric concurrency target committed, per OQ pending on NFR-04)\n+   - NFR-05: observability readiness — structured logging sufficient for diagnostics; metrics and tracing integration deferred (interim baseline per OQ pending on NFR-05)\n+ - rsk_refs: —\n+ - asm_refs: ASM-04 (Stateless design is the mechanism that enables horizontal scaling)\n+ - scope:\n+   - in: stateless service shell with independent deployment and horizontally scalable computation layer, no user session ownership; verification that identical inputs produce identical results across multiple instances\n+   - out: concrete deployment platform selection and infrastructure provisioning (architecture-phase concern); metrics and tracing integration (readiness only)\n+ - status: complete\n+ \n+ ### EPIC-08: API contract documentation\n+ - type: enabler\n+ - theme: T-04 (platform service foundation)\n+ - personas: P-01 (Backend Service Developer), P-02 (Automation Workflow Engineer), P-03 (AI Agent / AI-Driven Process Operator), P-04 (Reporting Pipeline Engineer)\n+ - priority_tier: must_have\n+ - complexity: S\n+ - traceability:\n+   - fr: —\n+   - jtbd: —\n+   - kpi: KPI-04 (API contract documentation for internal reuse)\n+ - nfr_dod:\n+   - NFR-07: simple payload design (operands + operation in, result out) documented as the usability baseline\n+ - rsk_refs: RSK-02 (Teams bypass the service and keep embedding their own calculation logic)\n+ - asm_refs: ASM-02 (The brief's conceptual API contract field names are the intended contract names)\n+ - scope:\n+   - in: published API contract documentation for the calculate operation (endpoint, request/response fields, operation enum, error responses) made available to internal consumers\n+   - out: developer portal or interactive documentation tooling beyond a published contract document\n+ - status: complete\n+ \n+ ---\n+ \n+ ---\n+ \n+ ## dependencies\n+ \n+ | blocked | blocked_description | blocker | blocker_description | type | impact | mitigation |\n+ |---------|----------------------|--------|----------------------|------|--------|------------|\n+ | EPIC-01 | Standard arithmetic calculation core | — | — | none | — | — |\n+ | EPIC-02 | Calculate API contract | EPIC-01 | Standard arithmetic calculation core | epic_to_epic | the endpoint exposes operations the calculation core defines; without EPIC-01 there is nothing to calculate | sequence EPIC-01 first; contract design can proceed in parallel against the agreed operation set |\n+ | EPIC-03 | Extensible operation registry | EPIC-01 | Standard arithmetic calculation core | epic_to_epic | the registry dispatches the operations the calculation core implements | build the registry on top of the completed standard operations |\n+ | EPIC-04 | Advanced operations extension | EPIC-03 | Extensible operation registry | epic_to_epic | advanced operations are added through the registry mechanism | deliver EPIC-03 before starting EPIC-04 |\n+ | EPIC-05 | Optional history persistence | EPIC-01 | Standard arithmetic calculation core | epic_to_epic | history records metadata of calculations performed by the calculation core | deliver EPIC-01 first; persistence layer is independent of the API layer |\n+ | EPIC-06 | History retrieval | EPIC-05 | Optional history persistence | epic_to_epic | retrieval requires recorded history to read | deliver EPIC-05 before EPIC-06 |\n+ | EPIC-07 | Stateless deployable service shell | — | — | none | — | — |\n+ | EPIC-08 | API contract documentation | EPIC-02 | Calculate API contract | epic_to_epic | documentation describes the contract EPIC-02 implements | draft from the agreed contract design in parallel; publish after EPIC-02 lands |\n+ | DEP-01 | Upstream consumer systems | — | — | external | no consumer integration means the service delivers no business value regardless of correctness (OQ-87c0d49a) | integration sequencing left to delivery planning; any one upstream system qualifies |\n+ \n+ ### circular_resolutions\n+ - none\n+ \n+ ---\n+ \n+ ---\n+ \n+ ## sequencing\n+ \n+ > **This section is the authoritative build order.** Downstream planners MUST adopt\n+ > `topological_order` as given (restricted to the units in their scope, relative\n+ > positions preserved) rather than re-deriving a sequence from the epic list or from\n+ > id numbers. Re-derivation is how ordering contradictions get introduced.\n+ \n+ ### topological_order\n+ 1. EPIC-01 — Standard arithmetic calculation core (feature, no blockers)\n+ 2. EPIC-07 — Stateless deployable service shell (enabler, no blockers)\n+ 3. EPIC-02 — Calculate API contract (blocked by EPIC-01)\n+ 4. EPIC-03 — Extensible operation registry (blocked by EPIC-01)\n+ 5. EPIC-08 — API contract documentation (blocked by EPIC-02)\n+ 6. EPIC-04 — Advanced operations extension (blocked by EPIC-03)\n+ 7. EPIC-05 — Optional history persistence (blocked by EPIC-01)\n+ 8. EPIC-06 — History retrieval (blocked by EPIC-05)\n+ \n+ ### phase_mapping\n+ - phase_1_mvp (must_have, no/resolved blockers): EPIC-01 (Standard arithmetic calculation core), EPIC-07 (Stateless deployable service shell), EPIC-02 (Calculate API contract), EPIC-03 (Extensible operation registry), EPIC-08 (API contract documentation)\n+ - phase_2 (should_have): EPIC-04 (Advanced operations extension)\n+ - phase_3 (could_have): EPIC-05 (Optional history persistence), EPIC-06 (History retrieval)\n+ - deferred: batch calculations, expression evaluation, workflow integration with automation agents, event-based history (PRD out_of_scope / wont_have items)\n+ \n+ ### sequencing_validations\n+ - edges_checked: 6 of 6 rows in `## dependencies` (epic_to_epic edges; the external DEP-01 row is carried, not ordered)\n+ - blocked_before_blocker_violations: 0\n+ - prd_conflict_notes: none — phase_mapping follows the PRD mvp_phasing (ASM-07 (MoSCoW priorities inferred from source phrasing), OQ-b450c1ca); dependency-aware sequencing is consistent with it\n+ \n+ #### ordering_proof\n+ \n+ | blocked | blocked_description | blocker | blocker_description | blocker_position | blocked_position | ok |\n+ |---------|----------------------|--------|----------------------|-------------------|-------------------|-----|\n+ | EPIC-02 | Calculate API contract | EPIC-01 | Standard arithmetic calculation core | 1 | 3 | yes |\n+ | EPIC-03 | Extensible operation registry | EPIC-01 | Standard arithmetic calculation core | 1 | 4 | yes |\n+ | EPIC-04 | Advanced operations extension | EPIC-03 | Extensible operation registry | 4 | 6 | yes |\n+ | EPIC-05 | Optional history persistence | EPIC-01 | Standard arithmetic calculation core | 1 | 7 | yes |\n+ | EPIC-06 | History retrieval | EPIC-05 | Optional history persistence | 7 | 8 | yes |\n+ | EPIC-08 | API contract documentation | EPIC-02 | Calculate API contract | 3 | 5 | yes |\n+ \n+ ---\n+ \n+ ---\n+ \n+ ## reclassification_log\n+ \n+ | candidate | gate_failed | reclassified_as | redistributed_to | reason |\n+ |-----------|-------------|-----------------|-------------------|--------|\n+ | NFR-01 (Standard operations respond at millisecond-level latency) | gate_2_nfr | dod_constraint | EPIC-01, EPIC-02 | NFR overlap: latency is a quality constraint on the calculation core and its API, not a demoable deliverable |\n+ | NFR-02 (Same input always produces the same result (determinism)) | gate_2_nfr | dod_constraint | EPIC-01, EPIC-02, EPIC-03, EPIC-04 | NFR overlap: determinism is a DoD constraint on every computation-bearing epic |\n+ | NFR-03 (Calculation succeeds even when history persistence fails) | gate_2_nfr | dod_constraint | EPIC-05 | NFR overlap: availability guarantee embedded in the history persistence epic (ASM-05 (OQ-abad2154)) |\n+ | NFR-04 (Stateless design supports horizontal scaling) | gate_2_nfr | dod_constraint | EPIC-07 | NFR overlap: scalability is the DoD of the stateless service shell enabler |\n+ | NFR-05 (Observability readiness for future metrics and tracing integration) | gate_2_nfr | dod_constraint | EPIC-07 | NFR overlap: observability readiness is a DoD constraint on the service shell |\n+ | NFR-06 (Security and access control for the calculation API) | gate_2_nfr | dod_constraint | EPIC-02 | NFR overlap: security applies to the calculate API surface |\n+ | NFR-07 (API usability for internal consumers) | gate_2_nfr | dod_constraint | EPIC-02, EPIC-08 | NFR overlap: usability applies to the API contract and its documentation |\n+ | API contract documentation (from KPI-04) | gate_3_enabler | enabler EPIC-08 | — | documentation/tooling, traces to KPI-04 (API contract documentation for internal reuse), no FR trace |\n+ | Stateless service shell (from FR-10) | gate_3_enabler | enabler EPIC-07 | — | infrastructure/platform foundation; carries FR-10 trace and KPI-01 alignment, no independent business demo |\n+ | Precision policy definition (from FR-03 design_note) | gate_1_demo | dod_constraint | EPIC-01 | not independently demoable; embedded as the single high-precision computation strategy DoD of EPIC-01; concrete policy pending (PI-01) |\n+ \n+ ---\n+ \n+ ---\n+ \n+ ## persona_coverage\n+ \n+ | persona | persona_name | epic_count | epic_ids | status |\n+ |---------|--------------|-----------|----------|--------|\n+ | P-01 | Backend Service Developer | 6 | EPIC-01, EPIC-02, EPIC-03, EPIC-05, EPIC-06, EPIC-08 | covered |\n+ | P-02 | Automation Workflow Engineer | 3 | EPIC-02, EPIC-07, EPIC-08 | covered |\n+ | P-03 | AI Agent / AI-Driven Process Operator | 3 | EPIC-02, EPIC-07, EPIC-08 | covered |\n+ | P-04 | Reporting Pipeline Engineer | 3 | EPIC-01, EPIC-02, EPIC-04, EPIC-08 | covered |\n+ \n+ ---\n+ \n+ ---\n+ \n+ ## goal_coverage\n+ \n+ Goals are read from the PRD's JTBD outcomes and KPI targets (the PRD defines no separate goals section).\n+ \n+ | prd_goal | epic_ids | status |\n+ |----------|----------|--------|\n+ | JTBD-01 (core_functional): deterministic result from a single authoritative math engine | EPIC-01, EPIC-02 | covered |\n+ | JTBD-02 (related): evolve numerical behavior in one controlled place without breaking consumers | EPIC-03 | covered |\n+ | JTBD-03 (related): trace and debug calculations through recorded metadata | EPIC-05, EPIC-06 | covered |\n+ | JTBD-04 (related): lightweight deterministic calculations inside automated workflows and AI processes | EPIC-02, EPIC-07 | covered |\n+ | KPI-01 (Upstream system integration adoption): at least 1 upstream system integrated | EPIC-02, EPIC-07 | covered |\n+ | KPI-02 (Deterministic test coverage of all operations): 100% deterministic unit test coverage | EPIC-01, EPIC-03, EPIC-04 | covered |\n+ | KPI-03 (History persistence validation): optional history persistence validated | EPIC-05 | covered |\n+ | KPI-04 (API contract documentation for internal reuse): API contract documented | EPIC-08 | covered |\n+ | KPI-05 (Reduction of duplicated math logic across teams): teams stop duplicating math logic | EPIC-01, EPIC-02, EPIC-08 | covered |\n+ | KPI-06 (Result consistency across systems): results become consistent | EPIC-01, EPIC-02 | covered |\n+ | KPI-07 (Calculation traceability availability): calculations traceable when something looks wrong | EPIC-05, EPIC-06 | covered |\n+ \n+ ---\n+ \n+ ---\n+ \n+ ## open_questions\n+ \n+ ### pending_inputs\n+ \n+ | id | affected_ids | blocking | type | section | item_id | field | impact | question | fallback_behavior | source_ref |\n+ |----|--------------|----------|------|---------|---------|-------|--------|----------|-------------------|------------|\n+ | — | — | — | — | — | — | — | — | — | — | — |\n+ \n+ No pending inputs raised by this run. Upstream PRD pending inputs (PI-01 through PI-11) are inherited and tracked in the PRD ledger; this backlog cites them where an epic relies on one (PI-01 in EPIC-01, OQ-025246e3 in EPIC-06, OQ-8a3647b2 and OQ-4d202bf8 in EPIC-02, OQ-87c0d49a in DEP-01, OQ-c5ed68d9 in KPI ownership rows).\n+ \n+ ### alignment_gaps\n+ \n+ | id | affected_ids | blocking | type | item_id | impact | description | fallback_behavior | source_ref |\n+ |----|--------------|----------|------|---------|--------|-------------|-------------------|------------|\n+ | — | — | — | — | — | — | — | — | — |\n+ \n+ No alignment gaps: every PRD persona is served by at least one epic, every JTBD and KPI traces to at least one epic, and no epic is unaligned (EPIC-07 and EPIC-08 are KPI-backed enablers per the reclassification log).\n+ \n+ ### assumptions_to_validate\n+ \n+ | id | affected_ids | blocking | assumption | source | impact_if_wrong | validation_method | fallback_behavior |\n+ |----|--------------|----------|------------|--------|-----------------|-------------------|-------------------|\n+ | ASM-E01 | T-04, EPIC-07, EPIC-08 | no | T-04 (platform service foundation) groups the stateless service shell (EPIC-07) and the API contract documentation (EPIC-08) as one foundation theme | theme generation (this run) | Epics may be misgrouped; EPIC-08 is a documentation enabler while EPIC-07 is an infrastructure enabler, so a reviewer may prefer separate themes | Review theme grouping with the product owner during backlog review | Current grouping used; both epics keep their own traceability and sequencing regardless of theme membership |\n+ \n+ ### summary\n+ - total_themes: 4\n+ - total_epics: 8\n+ - total_enablers: 2\n+ - total_spikes: 0\n+ - total_reclassified: 10\n+ - unaligned_epics: 0\n+ - uncovered_goals: 0\n+ - uncovered_personas: 0\n+ - pending_inputs: 0\n+ - assumptions: 1\n+ - status: complete\n+ \n+ ---\n+ "
+        },
+        {
+          "path": "artifacts/outputs/product-definition/epics/epics-verification/epics_failed_blocker_count.txt",
+          "change": "added",
+          "after_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "preview": "- \n+ 1"
+        },
+        {
+          "path": "artifacts/outputs/product-definition/epics/epics-verification/epics_verification_findings.json",
+          "change": "added",
+          "after_hash": "e1d4f1994d2b6fc04089bdeb57b4e0f1fb6004c4e1d3b6d8b5569a2031d8c8ab",
+          "preview": "- \n+ {\r\n+   \"verdict\": \"FAILED\",\r\n+   \"blocker_count\": 1,\r\n+   \"warn_count\": 0,\r\n+   \"artifact\": \"C:\\\\IA Trainings\\\\CalcService\\\\artifacts\\\\outputs\\\\product-definition\\\\epics\\\\EPICS-SPEC-pd-20261028-calc001.md\",\r\n+   \"companion\": \"C:\\\\IA Trainings\\\\CalcService\\\\artifacts\\\\outputs\\\\product-definition\\\\epics\\\\EPICS-AUDIT-pd-20261028-calc001.md\",\r\n+   \"findings\": [\r\n+     {\r\n+       \"id\": \"C01\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"10 top-level sections present in correct order.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C02\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"All required header fields present.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C03\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"mode is 'BUILD'.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C04\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"contract_format is 'structured'.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C05\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"prd_id_ownership table has all required columns.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C06\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"dependencies table has all required columns.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C07\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"sequencing structure and ordering_proof columns are correct.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C08\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"edges_checked=6 matches epic_to_epic count and ordering_proof rows.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C09\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"All description cells populated where IDs are not EM_DASH.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C10\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"FAIL\",\r\n+       \"description\": \"Bare IDs found in refs/traceability fields (name in parentheses required).\",\r\n+       \"detail\": \"themes line 14: bare ID 'T-03' not followed by (name); themes line 23: bare ID 'KPI-04' not followed by (name)\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C11\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"reclassification_log table has all required columns.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C12\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"persona_coverage table has all required columns.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C13\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"goal_coverage table has all required columns.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C14\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"open_questions has all 3 subsections rendered as tables.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C15\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"All defined IDs use allowed prefixes.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C16\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"prd_source_hash is valid 64-char lowercase hex.\",\r\n+       \"detail\": \"\"\r\n+     },\r\n+     {\r\n+       \"id\": \"C17\",\r\n+       \"weight\": \"BLOCKER\",\r\n+       \"status\": \"PASS\",\r\n+       \"description\": \"Spec defines 4 theme(s) and 8 epic(s).\",\r\n+       \"detail\": \"\"\r\n+     }\r\n+   ]\r\n+ }"
+        },
+        {
+          "path": "artifacts/outputs/product-definition/epics/epics-verification/epics_verification_verdict.txt",
+          "change": "added",
+          "after_hash": "02bd349299173f7fdf2dbc983d70961b26d74e6260c3755a058e25f5ee172f98",
+          "preview": "- \n+ FAILED"
+        },
+        {
+          "path": "artifacts/outputs/product-definition/epics/epics-verification/epics-verification-operations.log",
+          "change": "added",
+          "after_hash": "6eb720db4c72e29783c2bc9e39ef05880cb01f4a287cdb758b2329dce07b53eb",
+          "preview": "+ [12:01:50] epics-verification started\r\n+ [12:01:50] artifact-path input: './artifacts/outputs/product-definition/epics'\r\n+ [12:01:50] session root derived: C:\\IA Trainings\\CalcService\r\n+ [12:01:50] output: C:\\IA Trainings\\CalcService\\artifacts\\outputs\\product-definition\\epics\\epics-verification\r\n+ [12:01:50] artifact resolved: C:\\IA Trainings\\CalcService\\artifacts\\outputs\\product-definition\\epics\\EPICS-SPEC-pd-20261028-calc001.md\r\n+ [12:01:50] companion artifact resolved: C:\\IA Trainings\\CalcService\\artifacts\\outputs\\product-definition\\epics\\EPICS-AUDIT-pd-20261028-calc001.md\r\n+ [12:01:50] sections found: ['project_info', 'prd_id_ownership', 'themes', 'epics', 'dependencies', 'sequencing', 'reclassification_log', 'persona_coverage', 'goal_coverage', 'open_questions']\r\n+ [12:01:50] header fields found: ['version', 'session', 'mode', 'date', 'language', 'prd_source', 'contract_format', 'prd_source_hash', 'status']\r\n+ [12:01:50]   C01 [BLOCKER] PASS: 10 top-level sections present in correct order.\r\n+ [12:01:50]   C02 [BLOCKER] PASS: All required header fields present.\r\n+ [12:01:50]   C03 [BLOCKER] PASS: mode is 'BUILD'.\r\n+ [12:01:50]   C04 [BLOCKER] PASS: contract_format is 'structured'.\r\n+ [12:01:50]   C05 [BLOCKER] PASS: prd_id_ownership table has all required columns.\r\n+ [12:01:50]   C06 [BLOCKER] PASS: dependencies table has all required columns.\r\n+ [12:01:50]   C07 [BLOCKER] PASS: sequencing structure and ordering_proof columns are correct.\r\n+ [12:01:50]   C08 [BLOCKER] PASS: edges_checked=6 matches epic_to_epic count and ordering_proof rows.\r\n+ [12:01:50]   C09 [BLOCKER] PASS: All description cells populated where IDs are not EM_DASH.\r\n+ [12:01:50]   C10 [BLOCKER] FAIL: Bare IDs found in refs/traceability fields (name in parentheses required). | themes line 14: bare ID 'T-03' not followed by (name); themes line 23: bare ID 'KPI-04' not followed by (name)\r\n+ [12:01:50]   C11 [BLOCKER] PASS: reclassification_log table has all required columns.\r\n+ [12:01:50]   C12 [BLOCKER] PASS: persona_coverage table has all required columns.\r\n+ [12:01:50]   C13 [BLOCKER] PASS: goal_coverage table has all required columns.\r\n+ [12:01:50]   C14 [BLOCKER] PASS: open_questions has all 3 subsections rendered as tables.\r\n+ [12:01:50]   C15 [BLOCKER] PASS: All defined IDs use allowed prefixes.\r\n+ [12:01:50]   C16 [BLOCKER] PASS: prd_source_hash is valid 64-char lowercase hex.\r\n+ [12:01:50]   C17 [BLOCKER] PASS: Spec defines 4 theme(s) and 8 epic(s).\r\n+ [12:01:50] verdict: FAILED (blockers_failed=1, companion_readable=True)\r\n  "
+        }
+      ],
+      "exec_log_latest_completed_at": "2026-10-28T12:05:24.941Z"
+    },
+    "epics-verification": {
+      "status": "completed",
+      "notes": "",
+      "exec_log_latest_executor": "app",
+      "app_session": {
+        "app_id": "epics-verification",
+        "interaction": "headless",
+        "status": "completed",
+        "session_key": "1793189127039-bqn491v8",
+        "workspace_path": "C:\\IA Trainings\\CalcService\\workflow\\instances\\product-definition\\sessions\\product-calcservice\\app-sessions\\epics-verification\\round-0",
+        "staged_inputs": {
+          "artifact_path": "./artifacts/outputs/product-definition/epics",
+          "companion_artifact_path": "./artifacts/outputs/product-definition/epics"
+        },
+        "started_at": "2026-10-28T12:05:27.039Z",
+        "headless_run_id": "1793189127039-bqn491v8",
+        "round": 0
+      },
+      "open_questions_delivered_at": "2026-10-28T12:05:27.361Z",
+      "gate_reject_signature": "bc15e338:271",
+      "archetype": "review",
+      "started_at": "2026-10-28T12:05:25.082Z",
+      "exec_log_latest_path": "C:\\IA Trainings\\CalcService\\workflow\\instances\\product-definition\\sessions\\product-calcservice\\agent-run\\epics-verification__1793189127039-bqn491v8.log",
+      "exec_log_latest_run_id": "1793189127039-bqn491v8",
+      "exec_log_latest_model": "globant_dgx/GLM-5.3-Flash",
+      "exec_log_latest_started_at": "2026-10-28T12:05:27.039Z",
+      "exec_log_latest_session_resume": {
+        "resumed": false,
+        "cold_reason": "first_run"
+      },
+      "billing_state": "approved",
+      "completed_at": "2026-10-28T12:05:28.897Z",
+      "completed_by_user": true,
+      "outputs": {
+        "epics_verification_verdict": "PASSED",
+        "epics_verification_report_path": "./artifacts/outputs/product-definition/epics/epics-verification/epics_verification_findings.json",
+        "epics_failed_blocker_count": "0"
+      },
+      "artifact_group_id": "b711d7de-1e67-47a2-9137-147861f104a0",
+      "exec_log_latest_completed_at": "2026-10-28T12:05:28.874Z"
+    },
+    "epic-validation": {
+      "status": "in_progress",
+      "notes": "",
+      "started_at": "2026-10-28T12:05:28.936Z",
+      "review": {
+        "document_path": "artifacts\\outputs\\product-definition\\epics\\EPICS-AUDIT-pd-20261028-calc001.md",
+        "review_started_at": "2026-10-28T12:06:01.384Z",
+        "review_id": "d0f32522-2203-45b3-a793-5216d7ce376a",
+        "active_intervals": [
+          {
+            "opened_at": "2026-10-28T12:06:01.384Z",
+            "closed_at": "2026-10-28T12:07:03.174Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T12:07:07.487Z",
+            "closed_at": "2026-10-28T12:08:10.684Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T12:08:27.477Z",
+            "closed_at": "2026-10-28T12:08:29.992Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T12:09:51.610Z"
+          }
+        ]
+      }
+    }
+  },
+  "navigation_history": [
+    {
+      "timestamp": "2026-10-28T11:24:38.912Z",
+      "action": "started_capability",
+      "step": "prd-creation"
+    },
+    {
+      "timestamp": "2026-10-28T11:35:03.286Z",
+      "action": "executed_step",
+      "step": "prd-creation",
+      "metrics": {
+        "duration_seconds": 606,
+        "model": "globant_dgx/GLM-5.3-Flash",
+        "executor": "coda",
+        "model_tier": "orchestrator",
+        "token_usage": {
+          "input_tokens": 9419396,
+          "output_tokens": 43740,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0
+        },
+        "started_at": "2026-10-28T11:24:56.594Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "parallel_delegation": {
+          "available": true,
+          "used": false,
+          "count": 0
+        },
+        "items_spawned": 3
+      }
+    },
+    {
+      "timestamp": "2026-10-28T11:35:03.294Z",
+      "action": "completed_step",
+      "step": "prd-creation"
+    },
+    {
+      "timestamp": "2026-10-28T11:35:03.457Z",
+      "action": "navigated_forward",
+      "to_step": "prd-verification",
+      "from_step": "prd-creation"
+    },
+    {
+      "timestamp": "2026-10-28T11:36:23.816Z",
+      "action": "executed_step",
+      "step": "prd-verification",
+      "metrics": {
+        "duration_seconds": 3,
+        "model": "app:prd-validation",
+        "executor": "app",
+        "token_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "started_at": "2026-10-28T11:36:20.730Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-28T11:36:23.820Z",
+      "action": "exec_failed_step",
+      "step": "prd-verification",
+      "reason": "Gate 'prd-verification' rejected (verdict 'FAILED')."
+    },
+    {
+      "timestamp": "2026-10-28T11:36:23.821Z",
+      "action": "jumped_to_step",
+      "to_step": "prd-creation",
+      "from_step": "prd-verification",
+      "reason": "Gate 'prd-verification' reject (attempt 1/2) → retry 'prd-creation'"
+    },
+    {
+      "timestamp": "2026-10-28T11:38:23.920Z",
+      "action": "executed_step",
+      "step": "prd-creation",
+      "metrics": {
+        "duration_seconds": 119,
+        "model": "globant_dgx/GLM-5.3-Flash",
+        "executor": "coda",
+        "model_tier": "orchestrator",
+        "token_usage": {
+          "input_tokens": 658036,
+          "output_tokens": 7791,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0
+        },
+        "started_at": "2026-10-28T11:36:24.930Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": true,
+          "provider_session_id": "e597a956-67da-40ea-8940-0079830e8c47"
+        },
+        "parallel_delegation": {
+          "available": true,
+          "used": false,
+          "count": 0
+        },
+        "items_spawned": 3
+      }
+    },
+    {
+      "timestamp": "2026-10-28T11:38:23.921Z",
+      "action": "completed_step",
+      "step": "prd-creation"
+    },
+    {
+      "timestamp": "2026-10-28T11:38:23.978Z",
+      "action": "navigated_forward",
+      "to_step": "prd-verification",
+      "from_step": "prd-creation"
+    },
+    {
+      "timestamp": "2026-10-28T11:38:27.800Z",
+      "action": "executed_step",
+      "step": "prd-verification",
+      "metrics": {
+        "duration_seconds": 2,
+        "model": "app:prd-validation",
+        "executor": "app",
+        "token_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "started_at": "2026-10-28T11:38:25.892Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "items_spawned": 1
+      }
+    },
+    {
+      "timestamp": "2026-10-28T11:38:27.801Z",
+      "action": "completed_step",
+      "step": "prd-verification"
+    },
+    {
+      "timestamp": "2026-10-28T11:38:27.869Z",
+      "action": "navigated_forward",
+      "to_step": "prd-validation",
+      "from_step": "prd-verification"
+    },
+    {
+      "timestamp": "2026-10-28T11:44:03.633Z",
+      "action": "reviewed_step",
+      "step": "prd-validation",
+      "review": {
+        "document_path": "artifacts\\outputs\\product-definition\\prd\\PRD-SPEC-pd-20261027-calc001.md",
+        "review_started_at": "2026-10-28T11:39:54.145Z",
+        "review_id": "005f74a0-3f47-436f-977b-f9f00cde67ef",
+        "active_intervals": [
+          {
+            "opened_at": "2026-10-28T11:39:54.145Z",
+            "closed_at": "2026-10-28T11:42:09.484Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T11:42:14.526Z",
+            "closed_at": "2026-10-28T11:42:42.873Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T11:43:08.132Z",
+            "closed_at": "2026-10-28T11:44:03.620Z",
+            "source": "verdict"
+          }
+        ],
+        "reviewed_at": "2026-10-28T11:44:03.620Z",
+        "validation_action": "Approved",
+        "operator_id": "mario.tejeda@globant.com"
+      },
+      "review_action": "approve",
+      "review_operator_id": "mario.tejeda@globant.com",
+      "reason": "approve (validation_action=Approved, billing_state=approved)"
+    },
+    {
+      "timestamp": "2026-10-28T11:44:03.638Z",
+      "action": "completed_step",
+      "step": "prd-validation",
+      "review": {
+        "document_path": "artifacts\\outputs\\product-definition\\prd\\PRD-SPEC-pd-20261027-calc001.md",
+        "review_started_at": "2026-10-28T11:39:54.145Z",
+        "review_id": "005f74a0-3f47-436f-977b-f9f00cde67ef",
+        "active_intervals": [
+          {
+            "opened_at": "2026-10-28T11:39:54.145Z",
+            "closed_at": "2026-10-28T11:42:09.484Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T11:42:14.526Z",
+            "closed_at": "2026-10-28T11:42:42.873Z",
+            "source": "close"
+          },
+          {
+            "opened_at": "2026-10-28T11:43:08.132Z",
+            "closed_at": "2026-10-28T11:44:03.620Z",
+            "source": "verdict"
+          }
+        ],
+        "reviewed_at": "2026-10-28T11:44:03.620Z",
+        "validation_action": "Approved",
+        "operator_id": "mario.tejeda@globant.com"
+      }
+    },
+    {
+      "timestamp": "2026-10-28T11:45:03.227Z",
+      "action": "executed_step",
+      "step": "backlog-epic-generation",
+      "reason": "Invalid arguments for tool 'grep': missing required 'pattern' (expected string)",
+      "metrics": {
+        "duration_seconds": 24,
+        "model": "globant_dgx/GLM-5.3-Flash",
+        "executor": "coda",
+        "model_tier": "worker",
+        "started_at": "2026-10-28T11:44:38.848Z",
+        "succeeded": false,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "parallel_delegation": {
+          "available": true,
+          "used": false,
+          "count": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-28T11:50:27.409Z",
+      "action": "reset_to_pending",
+      "step": "backlog-epic-generation"
+    },
+    {
+      "timestamp": "2026-10-28T11:59:11.218Z",
+      "action": "executed_step",
+      "step": "backlog-epic-generation",
+      "metrics": {
+        "duration_seconds": 517,
+        "model": "globant_dgx/GLM-5.3-Flash",
+        "executor": "coda",
+        "model_tier": "worker",
+        "token_usage": {
+          "input_tokens": 6733612,
+          "output_tokens": 31076,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0
+        },
+        "started_at": "2026-10-28T11:50:33.471Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": true,
+          "provider_session_id": "ae198d7f-2000-4e01-87e3-36b324842635"
+        },
+        "parallel_delegation": {
+          "available": true,
+          "used": false,
+          "count": 0
+        },
+        "items_spawned": 4
+      }
+    },
+    {
+      "timestamp": "2026-10-28T11:59:11.221Z",
+      "action": "completed_step",
+      "step": "backlog-epic-generation"
+    },
+    {
+      "timestamp": "2026-10-28T11:59:11.427Z",
+      "action": "navigated_forward",
+      "to_step": "epics-verification",
+      "from_step": "backlog-epic-generation"
+    },
+    {
+      "timestamp": "2026-10-28T12:01:51.093Z",
+      "action": "executed_step",
+      "step": "epics-verification",
+      "metrics": {
+        "duration_seconds": 1,
+        "model": "app:epics-verification",
+        "executor": "app",
+        "token_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "started_at": "2026-10-28T12:01:49.677Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-28T12:01:51.095Z",
+      "action": "exec_failed_step",
+      "step": "epics-verification",
+      "reason": "Gate 'epics-verification' rejected (verdict 'FAILED')."
+    },
+    {
+      "timestamp": "2026-10-28T12:01:51.096Z",
+      "action": "jumped_to_step",
+      "to_step": "backlog-epic-generation",
+      "from_step": "epics-verification",
+      "reason": "Gate 'epics-verification' reject (attempt 1/2) → retry 'backlog-epic-generation'"
+    },
+    {
+      "timestamp": "2026-10-28T12:05:25.044Z",
+      "action": "executed_step",
+      "step": "backlog-epic-generation",
+      "metrics": {
+        "duration_seconds": 213,
+        "model": "globant_dgx/GLM-5.3-Flash",
+        "executor": "coda",
+        "model_tier": "worker",
+        "token_usage": {
+          "input_tokens": 865891,
+          "output_tokens": 9231,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0
+        },
+        "started_at": "2026-10-28T12:01:52.323Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": true,
+          "provider_session_id": "ae198d7f-2000-4e01-87e3-36b324842635"
+        },
+        "parallel_delegation": {
+          "available": true,
+          "used": false,
+          "count": 0
+        },
+        "items_spawned": 4
+      }
+    },
+    {
+      "timestamp": "2026-10-28T12:05:25.045Z",
+      "action": "completed_step",
+      "step": "backlog-epic-generation"
+    },
+    {
+      "timestamp": "2026-10-28T12:05:25.082Z",
+      "action": "navigated_forward",
+      "to_step": "epics-verification",
+      "from_step": "backlog-epic-generation"
+    },
+    {
+      "timestamp": "2026-10-28T12:05:28.897Z",
+      "action": "executed_step",
+      "step": "epics-verification",
+      "metrics": {
+        "duration_seconds": 2,
+        "model": "app:epics-verification",
+        "executor": "app",
+        "token_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "started_at": "2026-10-28T12:05:27.039Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "items_spawned": 1
+      }
+    },
+    {
+      "timestamp": "2026-10-28T12:05:28.897Z",
+      "action": "completed_step",
+      "step": "epics-verification"
+    },
+    {
+      "timestamp": "2026-10-28T12:05:28.936Z",
+      "action": "navigated_forward",
+      "to_step": "epic-validation",
+      "from_step": "epics-verification"
+    }
+  ],
+  "parameters": {
+    "project_brief": "./artifacts/inputs/project-brief.md",
+    "project_name": "CalcService",
+    "input_folder": "./artifacts/inputs",
+    "output_folder": "./artifacts/outputs/product-definition",
+    "meeting_recording": "meetings",
+    "transcript_output": "transcripts",
+    "prd_template": "prd_template.md",
+    "design_plan_report_path": "./artifacts/outputs/plan-design/design-plan-report.md",
+    "epics_output_folder": "epics",
+    "prd_output_folder": "prd",
+    "prd_output_path": "./artifacts/outputs/product-definition/prd",
+    "prd_verification_report_path": "./artifacts/outputs/product-definition/prd/prd-verification/prd_verification_findings.json",
+    "epics_output_path": "./artifacts/outputs/product-definition/epics",
+    "epics_verification_report_path": "./artifacts/outputs/product-definition/epics/epics-verification/epics_verification_findings.json"
+  },
+  "updated_at": "2026-10-28T12:09:51.661Z",
+  "stepwise_version": "2.8.0",
+  "seq": 50,
+  "devin_session_id": "ae198d7f-2000-4e01-87e3-36b324842635",
+  "archetype_summary": {
+    "by_archetype": {
+      "gate": {
+        "step_count": 2,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "synthesize": {
+        "step_count": 1,
+        "billable_step_count": 1,
+        "raw": {
+          "input_tokens": 658036,
+          "output_tokens": 7791,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 696991,
+        "billable_supervised_tokens": 1660800.6,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 9463136,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 9638096,
+        "iteration_billable_supervised_tokens": 963809.6000000001,
+        "iteration_billable_cost_usd": 0
+      },
+      "generate": {
+        "step_count": 1,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 865891,
+          "output_tokens": 9231,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 912046,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 6764688,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 6888992,
+        "iteration_billable_supervised_tokens": 688899.2000000001,
+        "iteration_billable_cost_usd": 0
+      },
+      "discover-internal": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "discover-deliverable": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "review": {
+        "step_count": 2,
+        "billable_step_count": 2,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "transform": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "excursion": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "refinement": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      }
+    },
+    "totals": {
+      "supervised_tokens": 1609037,
+      "billable_supervised_tokens": 1660800.6,
+      "held_supervised_tokens": 0,
+      "cost_usd": 0,
+      "supervised_cost_usd": 0,
+      "billable_cost_usd": 0,
+      "mode1_overhead_supervised_tokens": 0,
+      "mode1_overhead_cost_usd": 0,
+      "mode2_discarded_supervised_tokens": 0,
+      "mode2_discarded_cost_usd": 0,
+      "iteration_overhead_supervised_tokens": 16227824,
+      "iteration_overhead_cost_usd": 0,
+      "iteration_supervised_tokens": 16527088,
+      "iteration_billable_supervised_tokens": 1652708.8000000003,
+      "iteration_billable_cost_usd": 0,
+      "management_supervised_tokens": 0,
+      "management_cost_usd": 0
+    },
+    "audit_flags": [],
+    "last_computed_at": "2026-10-28T12:05:28.944Z",
+    "by_user": {
+      "mario.tejeda@globant.com": {
+        "raw": {
+          "input_tokens": 1523927,
+          "output_tokens": 17022,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 1609037,
+        "billable_supervised_tokens": 1660800.6,
+        "held_supervised_tokens": 0,
+        "iteration_supervised_tokens": 16527088,
+        "step_count": 3,
+        "execution_count": 7
+      },
+      "unknown-user": {
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "iteration_supervised_tokens": 0,
+        "step_count": 1,
+        "execution_count": 1
+      }
+    },
+    "by_user_completeness": {
+      "execution_count": 8,
+      "records_hash": "a800cf00"
+    },
+    "unallocated": {
+      "raw": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_creation_tokens": 0,
+        "cache_read_tokens": 0,
+        "cost_usd": 0
+      },
+      "supervised_tokens": 0,
+      "billable_supervised_tokens": 0,
+      "held_supervised_tokens": 0,
+      "iteration_supervised_tokens": 0,
+      "step_count": 0,
+      "execution_count": 0
+    }
+  }
+}

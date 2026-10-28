@@ -1,0 +1,767 @@
+[
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T11:36:23.841Z",
+    "kept_state": "primary",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T11:38:24.161Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T11:38:24.161Z",
+    "kept_state": "primary",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T11:38:27.890Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "f651e20f-4bee-41cd-bb22-240c8617b35c",
+    "step_id": "prd-creation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T11:38:27.890Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 696991,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:38:27.890Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:44:03.686Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 963809.6000000001,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "f651e20f-4bee-41cd-bb22-240c8617b35c",
+    "step_id": "prd-creation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:44:03.686Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 696991,
+    "billable_tokens": 696991,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:44:03.686Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "d0427eb9-a39d-4a5e-a77b-d48dbe018dc9",
+    "step_id": "prd-verification",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:44:03.686Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:59:11.550Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 963809.6000000001,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "f651e20f-4bee-41cd-bb22-240c8617b35c",
+    "step_id": "prd-creation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:59:11.550Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 696991,
+    "billable_tokens": 696991,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:59:11.550Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "d0427eb9-a39d-4a5e-a77b-d48dbe018dc9",
+    "step_id": "prd-verification",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T11:59:11.550Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "f7e4d86e-972a-4222-83b4-885070fdfde5",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "rejected",
+    "decided_at": "2026-10-28T11:59:11.550Z",
+    "kept_state": "infra_failure",
+    "iteration_index": 0,
+    "failure_mode": "infrastructure",
+    "is_billable": false,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0
+    }
+  },
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:01:51.103Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 963809.6000000001,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "f651e20f-4bee-41cd-bb22-240c8617b35c",
+    "step_id": "prd-creation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:01:51.103Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 696991,
+    "billable_tokens": 696991,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:01:51.103Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "d0427eb9-a39d-4a5e-a77b-d48dbe018dc9",
+    "step_id": "prd-verification",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:01:51.103Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "f7e4d86e-972a-4222-83b4-885070fdfde5",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "rejected",
+    "decided_at": "2026-10-28T12:01:51.103Z",
+    "kept_state": "infra_failure",
+    "iteration_index": 0,
+    "failure_mode": "infrastructure",
+    "is_billable": false,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0
+    }
+  },
+  {
+    "execution_id": "9cdff13c-d376-423a-a02b-c6faae0e4533",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T12:01:51.103Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 6888992,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:25.158Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 963809.6000000001,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "f651e20f-4bee-41cd-bb22-240c8617b35c",
+    "step_id": "prd-creation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:25.158Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 696991,
+    "billable_tokens": 696991,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:25.158Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "d0427eb9-a39d-4a5e-a77b-d48dbe018dc9",
+    "step_id": "prd-verification",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:25.158Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "f7e4d86e-972a-4222-83b4-885070fdfde5",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "rejected",
+    "decided_at": "2026-10-28T12:05:25.158Z",
+    "kept_state": "infra_failure",
+    "iteration_index": 0,
+    "failure_mode": "infrastructure",
+    "is_billable": false,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0
+    }
+  },
+  {
+    "execution_id": "9cdff13c-d376-423a-a02b-c6faae0e4533",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T12:05:25.158Z",
+    "kept_state": "iteration",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 6888992,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "882a2803-b74a-4844-9671-7bf36add701e",
+    "step_id": "epics-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T12:05:25.158Z",
+    "kept_state": "primary",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:28.947Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 963809.6000000001,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "f651e20f-4bee-41cd-bb22-240c8617b35c",
+    "step_id": "prd-creation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:28.947Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 696991,
+    "billable_tokens": 696991,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:28.947Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "d0427eb9-a39d-4a5e-a77b-d48dbe018dc9",
+    "step_id": "prd-verification",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:28.947Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "f7e4d86e-972a-4222-83b4-885070fdfde5",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "rejected",
+    "decided_at": "2026-10-28T12:05:28.947Z",
+    "kept_state": "infra_failure",
+    "iteration_index": 0,
+    "failure_mode": "infrastructure",
+    "is_billable": false,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0
+    }
+  },
+  {
+    "execution_id": "9cdff13c-d376-423a-a02b-c6faae0e4533",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T12:05:28.947Z",
+    "kept_state": "iteration",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 6888992,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "a1997679-04ee-4b74-acab-e63bbc3ea789",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 3,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "pending",
+    "decided_at": "2026-10-28T12:05:28.947Z",
+    "kept_state": "primary",
+    "iteration_index": 2,
+    "failure_mode": "none",
+    "is_billable": false,
+    "supervised_tokens": 912046,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "882a2803-b74a-4844-9671-7bf36add701e",
+    "step_id": "epics-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:05:28.947Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "d6d153ea-5b26-42cf-b130-55fa5ff22ce0",
+    "step_id": "prd-creation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 9638096,
+    "billable_tokens": 963809.6000000001,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "f651e20f-4bee-41cd-bb22-240c8617b35c",
+    "step_id": "prd-creation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 696991,
+    "billable_tokens": 696991,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "3cd306fd-f2d1-451f-8ccf-94a2f829d993",
+    "step_id": "prd-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "d0427eb9-a39d-4a5e-a77b-d48dbe018dc9",
+    "step_id": "prd-verification",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "f7e4d86e-972a-4222-83b4-885070fdfde5",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "rejected",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "infra_failure",
+    "iteration_index": 0,
+    "failure_mode": "infrastructure",
+    "is_billable": false,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0
+    }
+  },
+  {
+    "execution_id": "9cdff13c-d376-423a-a02b-c6faae0e4533",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "iteration",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 6888992,
+    "billable_tokens": 688899.2000000001,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "a1997679-04ee-4b74-acab-e63bbc3ea789",
+    "step_id": "backlog-epic-generation",
+    "version_sequence": 3,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "primary",
+    "iteration_index": 2,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 912046,
+    "billable_tokens": 912046,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  },
+  {
+    "execution_id": "882a2803-b74a-4844-9671-7bf36add701e",
+    "step_id": "epics-verification",
+    "version_sequence": 1,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "iteration",
+    "iteration_index": 0,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 0.1
+    }
+  },
+  {
+    "execution_id": "1397ac09-d00e-4f91-89ca-ab2618f4264c",
+    "step_id": "epics-verification",
+    "version_sequence": 2,
+    "user_id": "mario.tejeda@globant.com",
+    "state": "approved",
+    "decided_at": "2026-10-28T12:10:29.073Z",
+    "kept_state": "primary",
+    "iteration_index": 1,
+    "failure_mode": "none",
+    "is_billable": true,
+    "supervised_tokens": 0,
+    "billable_tokens": 0,
+    "applied_factors": {
+      "iteration_billable_factor": 1
+    }
+  }
+]

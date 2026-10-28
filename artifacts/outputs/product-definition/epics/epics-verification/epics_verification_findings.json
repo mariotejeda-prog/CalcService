@@ -1,0 +1,128 @@
+{
+  "verdict": "PASSED",
+  "blocker_count": 0,
+  "warn_count": 0,
+  "artifact": "C:\\IA Trainings\\CalcService\\artifacts\\outputs\\product-definition\\epics\\EPICS-SPEC-pd-20261028-calc001.md",
+  "companion": "C:\\IA Trainings\\CalcService\\artifacts\\outputs\\product-definition\\epics\\EPICS-AUDIT-pd-20261028-calc001.md",
+  "findings": [
+    {
+      "id": "C01",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "10 top-level sections present in correct order.",
+      "detail": ""
+    },
+    {
+      "id": "C02",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "All required header fields present.",
+      "detail": ""
+    },
+    {
+      "id": "C03",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "mode is 'BUILD'.",
+      "detail": ""
+    },
+    {
+      "id": "C04",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "contract_format is 'structured'.",
+      "detail": ""
+    },
+    {
+      "id": "C05",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "prd_id_ownership table has all required columns.",
+      "detail": ""
+    },
+    {
+      "id": "C06",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "dependencies table has all required columns.",
+      "detail": ""
+    },
+    {
+      "id": "C07",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "sequencing structure and ordering_proof columns are correct.",
+      "detail": ""
+    },
+    {
+      "id": "C08",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "edges_checked=6 matches epic_to_epic count and ordering_proof rows.",
+      "detail": ""
+    },
+    {
+      "id": "C09",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "All description cells populated where IDs are not EM_DASH.",
+      "detail": ""
+    },
+    {
+      "id": "C10",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "All IDs in refs/traceability fields followed by (name).",
+      "detail": ""
+    },
+    {
+      "id": "C11",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "reclassification_log table has all required columns.",
+      "detail": ""
+    },
+    {
+      "id": "C12",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "persona_coverage table has all required columns.",
+      "detail": ""
+    },
+    {
+      "id": "C13",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "goal_coverage table has all required columns.",
+      "detail": ""
+    },
+    {
+      "id": "C14",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "open_questions has all 3 subsections rendered as tables.",
+      "detail": ""
+    },
+    {
+      "id": "C15",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "All defined IDs use allowed prefixes.",
+      "detail": ""
+    },
+    {
+      "id": "C16",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "prd_source_hash is valid 64-char lowercase hex.",
+      "detail": ""
+    },
+    {
+      "id": "C17",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "Spec defines 4 theme(s) and 8 epic(s).",
+      "detail": ""
+    }
+  ]
+}

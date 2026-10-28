@@ -1,0 +1,26 @@
+[12:05:28] epics-verification started
+[12:05:28] artifact-path input: './artifacts/outputs/product-definition/epics'
+[12:05:28] session root derived: C:\IA Trainings\CalcService
+[12:05:28] output: C:\IA Trainings\CalcService\artifacts\outputs\product-definition\epics\epics-verification
+[12:05:28] artifact resolved: C:\IA Trainings\CalcService\artifacts\outputs\product-definition\epics\EPICS-SPEC-pd-20261028-calc001.md
+[12:05:28] companion artifact resolved: C:\IA Trainings\CalcService\artifacts\outputs\product-definition\epics\EPICS-AUDIT-pd-20261028-calc001.md
+[12:05:28] sections found: ['project_info', 'prd_id_ownership', 'themes', 'epics', 'dependencies', 'sequencing', 'reclassification_log', 'persona_coverage', 'goal_coverage', 'open_questions']
+[12:05:28] header fields found: ['version', 'session', 'mode', 'date', 'language', 'prd_source', 'contract_format', 'prd_source_hash', 'status']
+[12:05:28]   C01 [BLOCKER] PASS: 10 top-level sections present in correct order.
+[12:05:28]   C02 [BLOCKER] PASS: All required header fields present.
+[12:05:28]   C03 [BLOCKER] PASS: mode is 'BUILD'.
+[12:05:28]   C04 [BLOCKER] PASS: contract_format is 'structured'.
+[12:05:28]   C05 [BLOCKER] PASS: prd_id_ownership table has all required columns.
+[12:05:28]   C06 [BLOCKER] PASS: dependencies table has all required columns.
+[12:05:28]   C07 [BLOCKER] PASS: sequencing structure and ordering_proof columns are correct.
+[12:05:28]   C08 [BLOCKER] PASS: edges_checked=6 matches epic_to_epic count and ordering_proof rows.
+[12:05:28]   C09 [BLOCKER] PASS: All description cells populated where IDs are not EM_DASH.
+[12:05:28]   C10 [BLOCKER] PASS: All IDs in refs/traceability fields followed by (name).
+[12:05:28]   C11 [BLOCKER] PASS: reclassification_log table has all required columns.
+[12:05:28]   C12 [BLOCKER] PASS: persona_coverage table has all required columns.
+[12:05:28]   C13 [BLOCKER] PASS: goal_coverage table has all required columns.
+[12:05:28]   C14 [BLOCKER] PASS: open_questions has all 3 subsections rendered as tables.
+[12:05:28]   C15 [BLOCKER] PASS: All defined IDs use allowed prefixes.
+[12:05:28]   C16 [BLOCKER] PASS: prd_source_hash is valid 64-char lowercase hex.
+[12:05:28]   C17 [BLOCKER] PASS: Spec defines 4 theme(s) and 8 epic(s).
+[12:05:28] verdict: PASSED (blockers_failed=0, companion_readable=True)

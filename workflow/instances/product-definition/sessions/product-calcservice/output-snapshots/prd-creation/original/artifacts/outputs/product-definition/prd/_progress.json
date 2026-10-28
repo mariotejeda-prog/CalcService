@@ -1,0 +1,26 @@
+{
+  "skill": "researching-prd",
+  "session_id": "pd-20261027-calc001",
+  "status": "COMPLETED",
+  "started_at": "2026-10-28T11:27:09Z",
+  "completed_at": "2026-10-28T11:34:08Z",
+  "skeleton_written": true,
+  "sections": {
+    "project_info": "complete",
+    "scope": "complete",
+    "personas": "complete",
+    "functional_requirements": "complete",
+    "non_functional_requirements": "complete",
+    "kpis": "complete",
+    "jtbd": "complete",
+    "traceability": "complete",
+    "dependencies": "complete",
+    "risks": "complete",
+    "assumptions": "complete",
+    "constraints": "complete",
+    "mvp_phasing": "complete",
+    "literal_registry": "complete",
+    "glossary": "complete",
+    "open_questions": "complete"
+  }
+}

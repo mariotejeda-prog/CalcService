@@ -1,0 +1,2 @@
+[app-executor] product-definition/epics-verification app=epics-verification run=1793188909677-4xs52w7a
+$ python3 "C:\Users\mario.tejeda\.ai_pods_stepwise\registry\apps\epics-verification/check_epics.py" --artifact-path "./artifacts/outputs/product-definition/epics" --companion-artifact-path "./artifacts/outputs/product-definition/epics" --output "C:\IA Trainings\CalcService\artifacts\outputs\product-definition\epics\epics-verification"

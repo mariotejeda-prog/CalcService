@@ -1,0 +1,29 @@
+{
+  "verdict": "PASSED",
+  "blocker_count": 0,
+  "warn_count": 0,
+  "findings": [
+    {
+      "id": "RV1",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "No upstream blocker failures reported.",
+      "detail": ""
+    },
+    {
+      "id": "RV2",
+      "weight": "BLOCKER",
+      "status": "PASS",
+      "description": "No placeholder text found in project_info fields.",
+      "detail": ""
+    },
+    {
+      "id": "RV5",
+      "weight": "WARNING",
+      "status": "PASS",
+      "description": "mvp_phasing IDs all have accompanying requirement names.",
+      "detail": ""
+    }
+  ],
+  "checked_at": "2026-10-28T11:38:27Z"
+}
